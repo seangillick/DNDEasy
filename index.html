@@ -68,6 +68,18 @@ body{
   line-height: 30px;
   font-size: 20px;
 }    
+  
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 </style> 
 </head>
 <body a link = "white" vlink = "white">    
@@ -77,13 +89,23 @@ body{
    <h1>Choose a style of sheet to begin character creation or click on basic rules to learn how to play</h1>
    <br>
    <br>
+   <div class="row">
+<div class=column">
+
 <a href = "https://seangillick.github.io/DNDEasy/classes.html"> 
    <img src = "https://i.redd.it/cw8sxhc3g5a01.png" class = "sheets">
 </a>
+</div>
+<div class = "column">
  <img src = "https://img.freepik.com/free-vector/coming-soon-message-illuminated-with-light-projector_1284-3622.jpg?size=338&ext=jpg" class = "sheets">
+</div>
+<div class = "column">
 <a href = "https://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf">
    <img src = "https://2.bp.blogspot.com/-FILRvt0Dsdo/U-uD7mmwFsI/AAAAAAAABo0/noM1ZgAeqLcIc29kGG9-vM6kKiGVm9YtQCPcBGAYYCw/s1600/Basic%2BGame%2BCover%2B-%2BSmall.jpg" class = "sheets">
 </a>   
+</div>
+</div>
+
    <div class="flex-container">
   <div>Beginner Mode</div>
   <div>Expert Mode (Under Development)</div>
