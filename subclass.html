@@ -1,5 +1,45 @@
 <html>
+<head>
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
+</head>
 <style>
+    h1{
+   color: white;
+   font-family: "Bowlby One SC"; 
+   font-size: 28px;  
+   font-weight: 400; 
+   line-height: 20px;
+   font-style: normal; 
+   font-variant: normal;
+   
+   }
+  h2{
+   color: white;
+   font-family: "Bowlby One SC"; 
+   font-size: 20px;  
+   font-weight: 400; 
+   line-height: 20px;
+   font-style: normal; 
+   font-variant: normal;
+   margin-left: 200px;
+   
+   }
+   .cText{
+   text-align:center;
+    }
+.button{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin-left:auto;
+    margin-right: auto;
+    color:black;
+}
+
 p{
    color: white;
    font-family: "Bowlby One SC"; 
@@ -20,13 +60,70 @@ body{
   margin-right: auto;
   width: 50%;
 }
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  height:25%;
+}
+.flex-container > div {
+  text-align: center;
+  margin-bottom:7%;
+  width:20%;
+}
+.classes{
+ height:100%;
+ width:80%;
+  
+}
+
+.flex-container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  height:20%;
+}
+.flex-container2 > div {
+  text-align: center;
+  margin-bottom:7%;
+  width:20%;
+}
 
 </style>
 <body>
-<a href = "https://seangillick.github.io/DNDEasy/index.html"> 
- <img src = "https://i.imgur.com/VP0Shv3.png" width ="30" height="120" class="logo"/>
+<a href = "https://seangillick.github.io/DNDEasy/subDescription.html"> 
+    <img src = "https://i.imgur.com/VP0Shv3.png" height="120" width="30" class="logo"/>
 </a>
-<p>This page will have our subclasses</p>
+<br>
+<div>
+    <h1 class="cText">Part 2: Choose your subclasses</h1>
+</div>
+<br>
+<br>
+<div class="flex-container">
+  <div><a href = "https://seangillick.github.io/DNDEasy/classDescription.html"><img src = "https://db4sgowjqfwig.cloudfront.net/campaigns/90586/assets/839736/Abjuration.jpg?1521275095" class = "classes"></a><br><p align = "center">School of Abjuration</p></div>
+  <div><img src = "https://db4sgowjqfwig.cloudfront.net/campaigns/90586/assets/839747/conjuration_wizard.jpg?1521276342" class = "classes"><br><p>School of Conjuration</p></div>
+  <div><img src = "https://db4sgowjqfwig.cloudfront.net/campaigns/90586/assets/839732/Divination.jpg?1521274100" class = "classes"><br><p>School of Divination</p></div>  
+  <div><img src = "https://db4sgowjqfwig.cloudfront.net/campaigns/90586/assets/840517/Enchantment.jpg?1521476661" class = "classes"><br><p>School of Enchantment</p></div>
+  <div><img src = "https://db4sgowjqfwig.cloudfront.net/campaigns/90586/assets/839750/Evocation.jpg?1521276742" class = "classes"><br><p>School of Evocation</p></div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="flex-container2">
+  <div><img src = "https://db4sgowjqfwig.cloudfront.net/campaigns/90586/assets/840532/illusion.jpg?1521478648" class = "classes"><br><p align = "center">School of Illusion</p></div>
+  <div><img src = "https://orig00.deviantart.net/09a8/f/2015/239/d/2/loreseeker_by_chazillah-d97bfvo.jpg" class = "classes"><br><p>School of Invention</p></div>
+  <div><img src = "https://db4sgowjqfwig.cloudfront.net/campaigns/90586/assets/839751/Necromancy.jpg?1521276805" class = "classes"><br><p>School of Necromancy</p></div>  
+  <div><img src = "https://db4sgowjqfwig.cloudfront.net/campaigns/90586/assets/839753/Transmutation.jpg?1521277445" class = "classes"><br><p>School of Transmutation</p></div>
+</div>
+<br>
+<br>
+<br>
+<br> 
+<button class = "button" onclick="goBack()">Go Back</button>
 
 </body>
 </html>
