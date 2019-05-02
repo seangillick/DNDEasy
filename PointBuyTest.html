@@ -10,13 +10,16 @@
 
          }
 
-         function addone() {
-
+         function addone(value) {
+            var value = window.event || e;
+            
+            return value;
          }
 
-         function subtractone() {
-
+         function subtractone(value) {
          }
+            value += 1;
+            return value;
       </script>
    </head>
    <style>
