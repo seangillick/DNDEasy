@@ -63,29 +63,53 @@
       margin-bottom:7%;
       width:20%;
       }
+
+      table {
+         color: white;
+         font-family: "Bowlby One SC"; 
+         font-size: 20px;  
+         font-weight: 400; 
+         line-height: 20px;
+         font-style: normal; 
+         font-variant: normal;
+         border-collapse: collapse;
+         width: 100%;
+      }
    </style>
    <body>
       <a href = "https://seangillick.github.io/DNDEasy/index.html"> 
       <img src = "https://i.imgur.com/VP0Shv3.png" height="120" width="30" class="logo">
       </a>
       <p align = "center">Point Buy Calculator</p>
-      <br>
-      <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" />
-      </br>
-      <br>
-      <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" />
-      </br>
-      <br>
-      <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" />
-      </br>
-      <br>
-      <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" />
-      </br>
-      <br>
-      <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" />
-      </br>
-      <br>
-      <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" />
-      </br>
+   <table>
+      <tr>
+         <th>Attribute</th>
+         <th>Ability Score</th>
+         <th>+</th>
+         <th>Racial Bonus</th>
+         <th>=</th>
+         <th>Total Score</th>
+         <th>Ability Modifier</th>
+         <th>Point Cost</th>
+      </tr>
+      <tr>
+         <th>Strength <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" /></th>
+      </tr>
+      <tr>
+         <th>Dexterity <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" /></th>
+      </tr>
+      <tr>
+         <th>Constitution <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" /></th>
+      </tr>
+      <tr>
+         <th>Intelligence <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" /></th>
+      </tr>
+      <tr>
+         <th>Wisdom <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" /></th>
+      </tr>
+      <tr>
+         <th>Charisma <input type="number" id="attributeNum" name="attributeNum" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()" /></th>
+      </tr>
+   </table>
    </body>
 </html>
