@@ -4,11 +4,10 @@ var readline = require('readline-sync');
 var express = require("express")
 var app = express()
 var button = document.getElementsByClassName("testButton");
-
-
+testinput = ""
 
 function testFunction(){
-    return "Yeehaw"
+    testinput = "Yeehaw"
 }
 
 
@@ -16,14 +15,13 @@ const fs = require('fs');
 const stream = doc.pipe(blobStream());
 const doc = new PDFDocument;
 
-var test = "This is a test";
 
 doc.image('test.jpg',0,0,{scale:.39, align:'center',valign:'top'})
 //var name = readline.question("What is your name?");
 
 function fillBoxes(){
     doc.fontSize(12);
-    doc.text(testFunction(),55,64)//char name
+    doc.text(testinput,55,64)//char name
     doc.text('Class',273,52)//char class
     doc.text('Timothy',485,52)//player name
     doc.text('Race',273,79)//char race
