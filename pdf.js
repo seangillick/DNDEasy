@@ -3,6 +3,7 @@ testinput = ""
 
 function testFunction(){
     testinput = "Yeehaw"
+    fillBoxes();
 }
 
 const doc = new PDFDocument();
