@@ -5,10 +5,8 @@ function testFunction(){
     testinput = "Yeehaw"
 }
 
-
-const fs = require('fs');
+const doc = new PDFDocument();
 const stream = doc.pipe(blobStream());
-const doc = new PDFDocument;
 
 
 doc.image('test.jpg',0,0,{scale:.39, align:'center',valign:'top'})
