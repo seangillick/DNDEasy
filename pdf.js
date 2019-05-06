@@ -1,14 +1,6 @@
-const PDFDocument = require('pdfkit');
-const blobStream  = require('blob-stream');
-var readline = require('readline-sync');
-var express = require("express")
-var app = express()
 var button = document.getElementsByClassName("testButton");
 testinput = ""
-res.writeHead( 200, {
-    'Content-Type': 'application/pdf',
-    'Content-Disposition': 'attachment; filename=test.pdf'
-} );
+
 function testFunction(){
     testinput = "Yeehaw"
     fillBoxes();
