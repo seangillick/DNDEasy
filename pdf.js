@@ -85,8 +85,8 @@ doc.image('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAsgAAADjCAYAAACYX+KqAAA
 
 doc.end();
 stream.on('finish', function() {
-   const url = stream.toBlobURL('application/pdf');
-   iframe.src = url;
+    var url = this.toBlobURL();
+    window.open(url);
 });
 
 
