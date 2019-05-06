@@ -94,7 +94,7 @@ doc.image('logo.png',50,0,{width:170})
 
 doc.end();
 stream.on('finish', function() {
-  const url = stream.toBlobURL('new2.pdf');
+  const url = stream.toBlobURL('application/pdf');
   iframe.src = url;
 });
 
