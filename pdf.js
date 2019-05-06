@@ -8,8 +8,7 @@ var button = document.getElementsByClassName("testButton");
 
 
 function testFunction(){
-    console.log("yeehaw");
-    
+    return "Yeehaw"
 }
 
 
@@ -24,7 +23,7 @@ doc.image('test.jpg',0,0,{scale:.39, align:'center',valign:'top'})
 
 function fillBoxes(){
     doc.fontSize(12);
-    doc.text('Blagmother',55,64)//char name
+    doc.text(testFunction,55,64)//char name
     doc.text('Class',273,52)//char class
     doc.text('Timothy',485,52)//player name
     doc.text('Race',273,79)//char race
