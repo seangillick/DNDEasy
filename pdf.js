@@ -1,8 +1,3 @@
-const PDFDocument = require('pdfkit');
-const blobStream  = require('blob-stream');
-var readline = require('readline-sync');
-var express = require("express")
-var app = express()
 var button = document.getElementsByClassName("testButton");
 testinput = ""
 
