@@ -1,8 +1,11 @@
 const PDFDocument = require('pdfkit');
+const blobStream  = require('blob-stream');
 var readline = require('readline-sync');
 var express = require("express")
 var app = express()
 var button = document.getElementsByClassName("testButton");
+
+
 
 function testFunction(){
     console.log("yeehaw");
@@ -11,11 +14,11 @@ function testFunction(){
 
 
 const fs = require('fs');
+const stream = doc.pipe(blobStream());
 const doc = new PDFDocument;
 
 var test = "This is a test";
 
-doc.pipe(fs.createWriteStream('new2.pdf'));
 doc.image('test.jpg',0,0,{scale:.39, align:'center',valign:'top'})
 //var name = readline.question("What is your name?");
 
@@ -91,6 +94,11 @@ doc.fillAndStroke('white')
 doc.image('logo.png',50,0,{width:170})
 
 doc.end();
+stream.on('finish', function() {
+  const url = stream.toBlobURL('new2.pdf');
+  iframe.src = url;
+});
+
 
 // app.get("/download",function(req,res){
 //     res.download("new2.pdf")
