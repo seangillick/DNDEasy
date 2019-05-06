@@ -2,7 +2,12 @@ const PDFDocument = require('pdfkit');
 var readline = require('readline-sync');
 var express = require("express")
 var app = express()
+var button = document.getElementsByClassName("testButton");
 
+function testFunction(){
+    console.log("yeehaw");
+    
+}
 
 
 const fs = require('fs');
