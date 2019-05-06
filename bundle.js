@@ -32925,8 +32925,6 @@ function extend() {
 
 },{}],190:[function(require,module,exports){
 const PDFDocument = require('pdfkit');
-var parts = PDFDocument.parse(window.location);
-console.log(parts)
 const blobStream  = require('blob-stream');
 var readline = require('readline-sync');
 var express = require("express")
