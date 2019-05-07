@@ -3,11 +3,11 @@ testinput = ""
 race = ""
 
 function testFunction(){
-    sessionStorage.setItem("testinput", "Yeehaw");
+    localStorage.testinput = "Yeehaw";
 }
 
 function chooseRace(){
-    sessionStorage.setItem("race","DragonBorn")
+    localStorage.race = "Dragonborn";
     
     
 }
@@ -20,10 +20,10 @@ doc.image('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBQYFBAYGBQ
 
 function fillBoxes(){
     doc.fontSize(12);
-    doc.text(sessionStorage.getItem("testinput"),55,64)//char name
+    doc.text(localStorage.testinput,55,64)//char name
     doc.text("Class",273,52)//char class
     doc.text('Timothy',485,52)//player name
-    doc.text(sessionsStorage.getItem("race"),273,79)//char race
+    doc.text(localStorage.race,273,79)//char race
     doc.text('Alignment',379,79)//char alignment
     doc.text('EXP',485,79)//char exp
     doc.text('+2',55,130)//char prof
