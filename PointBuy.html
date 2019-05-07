@@ -1,21 +1,12 @@
-<html>
-<head>
-<script>
-function goBack() {
-  window.history.back()
-}
-</script>
-</head>
+<!DOCTYPE html> 
+<html> 
+   <body>
+      <a href = "https://seangillick.github.io/DNDEasy/index.html"> 
+      <img src = "https://i.imgur.com/VP0Shv3.png" height="120" width="30" class="logo">
+      </a>
+      <p align = "center">Point Buy Calculator</p>
 <style>
-.button{
-    display: block;
-    text-align: center;
-    font-size: 30px;
-    margin-left:auto;
-    margin-right: auto;
-    color:black;
-}
-p{
+   p{
    color: white;
    font-family: "Bowlby One SC"; 
    font-size: 20px;  
@@ -23,53 +14,229 @@ p{
    line-height: 20px;
    font-style: normal; 
    font-variant: normal;
-   
-}
-body{
-    background-color: rgb(86, 86, 86);
-    background-size: cover;
-  }
- .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  height:20%;
-}
-.flex-container > div {
-  text-align: center;
-  margin-bottom:7%;
-  width:20%;
-}
-.races{
- height:90%;
- width:60%;
+   }
+   body{
+   background-color: rgb(86, 86, 86);
+   background-size: cover;
+   }
+   .logo {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+   }
+   .flex-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-content: center;
+   height:20%;
+   }
+   .flex-container > div {
+   text-align: center;
+   margin-bottom:7%;
+   width:20%;
+   }
+   .races{
+   height:90%;
+   width:60%;
+   }
+   .flex-container2 {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-content: center;
+   height:20%;
+   }
+   .flex-container2 > div {
+   text-align: center;
+   margin-bottom:7%;
+   width:20%;
+   }
+ 
+   table {
+      font-family: "Bowlby One SC"; 
+      font-size: 20px;  
+      font-weight: 400; 
+      line-height: 20px;
+      font-style: normal; 
+      font-variant: normal;
+      border-collapse: collapse;
+      width: 60%;
+   }
+ 
+   td, th {
+      border: 1px solid;
+      text-align: left;
+      color: white;
+      padding: 8px;
+   }
   
-}
-.flex-container2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  height:20%;
-}
-.flex-container2 > div {
-  text-align: center;
-  margin-bottom:7%;
-  width:20%;
-}
-</style>
-<body>
-<a href = "https://seangillick.github.io/DNDEasy/index.html"> 
- <img src = "https://i.imgur.com/VP0Shv3.png" height="120" width="30" class="logo">
-</a>
-<p align = "center">Point Buy will go here</p>
+ </style> 
+</head><body onload="StartingForm()"> 
+<div align="center"> 
+<div> 
+		<div> 
+			<div> 
+				<script> 
+   function StartingForm() {
+      document.getElementById("str").selectedIndex = 0;
+      document.getElementById("dex").selectedIndex = 0;
+      document.getElementById("con").selectedIndex = 0;
+      document.getElementById("iq").selectedIndex = 0;
+      document.getElementById("wis").selectedIndex = 0;
+      document.getElementById("cha").selectedIndex = 0;
+ 
+      addPoints();
+   }
+  
+   function addPoints() {
+      var str = parseInt(document.getElementById("str").value);
+      var dex = parseInt(document.getElementById("dex").value);
+      var con = parseInt(document.getElementById("con").value);
+      var iq = parseInt(document.getElementById("iq").value);
+      var wis = parseInt(document.getElementById("wis").value);
+      var cha = parseInt(document.getElementById("cha").value);
+      
+      var strMod = parseInt(document.getElementById("strMod").value);
+      var dexMod = parseInt(document.getElementById("dexMod").value);
+      var conMod = parseInt(document.getElementById("conMod").value);
+      var iqMod = parseInt(document.getElementById("iqMod").value);
+      var wisMod = parseInt(document.getElementById("wisMod").value);
+      var chaMod = parseInt(document.getElementById("chaMod").value);
+ 
+      var strTotal = parseInt(document.getElementById("str").options[document.getElementById("str").selectedIndex].text) + parseInt(strMod);
+      var dexTotal = parseInt(document.getElementById("dex").options[document.getElementById("dex").selectedIndex].text) + parseInt(dexMod);
+      var conTotal = parseInt(document.getElementById("con").options[document.getElementById("con").selectedIndex].text) + parseInt(conMod);
+      var iqTotal = parseInt(document.getElementById("iq").options[document.getElementById("iq").selectedIndex].text) + parseInt(iqMod);
+      var wisTotal = parseInt(document.getElementById("wis").options[document.getElementById("wis").selectedIndex].text) + parseInt(wisMod);
+      var chaTotal = parseInt(document.getElementById("cha").options[document.getElementById("cha").selectedIndex].text) + parseInt(chaMod);
+ 
+      document.getElementById("strTotal").innerHTML = strTotal;
+      document.getElementById("dexTotal").innerHTML = dexTotal;
+      document.getElementById("conTotal").innerHTML = conTotal;
+      document.getElementById("iqTotal").innerHTML = iqTotal;
+      document.getElementById("wisTotal").innerHTML = wisTotal;
+      document.getElementById("chaTotal").innerHTML = chaTotal;
 
-</body>
-</html>
+      var totalPF = str + dex + con + iq + wis + cha;    
+      document.getElementById("totalPoints").innerHTML = totalPF;
+
+   }
+</script> 
+
+<table> 
+  <tbody><tr> 
+  <th>Attribute</th> 
+  <th>Ability Score</th> 
+  <th>Racial Mod</th> 
+  <th>Total Score</th> 
+  </tr> 
+  <tr> 
+    <td>Strength</td> 
+    <td> 
+      <select id="str" onchange=addPoints();> 
+         <option value="0" selected="">8</option> 
+         <option value="1">9 (1)</option> 
+         <option value="2">10 (2)</option> 
+         <option value="3">11 (3)</option> 
+         <option value="4">12 (4)</option> 
+         <option value="5">13 (5)</option> 
+         <option value="6">14 (6)</option> 
+         <option value="7">15 (7)</option> 
+      </select> 
+    </td> 
+    <td><input type="text" size="3" id="strMod" value="0" onchange=addPoints();></td> 
+    <td><span id="strTotal">8</span></td> 
+  </tr> 
+  <tr> 
+ 
+    <td>Dexterity</td> 
+    <td> 
+      <select id="dex" onchange=addPoints();> 
+         <option value="0" selected="">8</option> 
+         <option value="1">9 (1)</option> 
+         <option value="2">10 (2)</option> 
+         <option value="3">11 (3)</option> 
+         <option value="4">12 (4)</option> 
+         <option value="5">13 (5)</option> 
+         <option value="6">14 (6)</option> 
+         <option value="7">15 (7)</option> 
+      </select> 
+    </td> 
+    <td><input type="text" size="3" id="dexMod" value="0" onchange=addPoints();></td> 
+    <td><span id="dexTotal">8</span></td> 
+  </tr> 
+  <tr> 
+    <td>Constitution</td> 
+    <td> 
+      <select id="con" onchange=addPoints();> 
+         <option value="0" selected="">8</option> 
+         <option value="1">9 (1)</option> 
+         <option value="2">10 (2)</option> 
+         <option value="3">11 (3)</option> 
+         <option value="4">12 (4)</option> 
+         <option value="5">13 (5)</option> 
+         <option value="6">14 (6)</option> 
+         <option value="7">15 (7)</option> 
+      </select> 
+    </td> 
+    <td><input type="text" size="3" id="conMod" value="0" onchange=addPoints();></td> 
+    <td><span id="conTotal">8</span></td> 
+  </tr> 
+  <tr> 
+ 
+    <td>Intelligence</td> 
+    <td> 
+      <select id="iq" onchange=addPoints();> 
+         <option value="0" selected="">8</option> 
+         <option value="1">9 (1)</option> 
+         <option value="2">10 (2)</option> 
+         <option value="3">11 (3)</option> 
+         <option value="4">12 (4)</option> 
+         <option value="5">13 (5)</option> 
+         <option value="6">14 (6)</option> 
+         <option value="7">15 (7)</option> 
+      </select> 
+    </td> 
+    <td><input type="text" size="3" id="iqMod" value="0" onchange=addPoints();></td> 
+    <td><span id="iqTotal">8</span></td> 
+  </tr> 
+  <tr> 
+    <td>Wisdom</td> 
+    <td> 
+      <select id="wis" onchange=addPoints();> 
+         <option value="0" selected="">8</option> 
+         <option value="1">9 (1)</option> 
+         <option value="2">10 (2)</option> 
+         <option value="3">11 (3)</option> 
+         <option value="4">12 (4)</option> 
+         <option value="5">13 (5)</option> 
+         <option value="6">14 (6)</option> 
+         <option value="7">15 (7)</option> 
+      </select> 
+    </td> 
+    <td><input type="text" size="3" id="wisMod" value="0" onchange=addPoints();></td> 
+    <td><span id="wisTotal">8</span></td> 
+  </tr> 
+  <tr> 
+ 
+    <td>Charisma</td> 
+    <td> 
+      <select id="cha" onchange=addPoints();> 
+         <option value="0" selected="">8</option> 
+         <option value="1">9 (1)</option> 
+         <option value="2">10 (2)</option> 
+         <option value="3">11 (3)</option> 
+         <option value="4">12 (4)</option> 
+         <option value="5">13 (5)</option> 
+         <option value="6">14 (6)</option> 
+         <option value="7">15 (7)</option> 
+      </select> 
+    </td> 
+    <td><input type="text" size="3" id="chaMod" value="0" onchange=addPoints();></td> 
+    <td><span id="chaTotal">8</span></td> 
+  </tr> 
+  </tbody></table> 
+  <div class="total"><p>Total Points:<span id="totalPoints" class="total_points">0</span>/27</p></div> 
+</body></html>
