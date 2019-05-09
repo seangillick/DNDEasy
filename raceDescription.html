@@ -1,248 +1,269 @@
+
 <html>
-<head>
-  <script src="https://github.com/foliojs/pdfkit/releases/download/v0.8.0/pdfkit.js"></script>
-  <script src="https://github.com/devongovett/blob-stream/releases/download/v0.1.3/blob-stream.js"></script>
-  <script src="pdf.js"></script>
-<script>
-
-function goBack() {
-  window.history.back()
-}
-
-function forward(){
-        window.location='https://seangillick.github.io/DNDEasy/PointBuy.html';
-}
-</script>
-</head>
-<style>
-body{
-    background-color: rgb(86, 86, 86);
-    background-size: cover;
+    <head>
+      <script src="https://github.com/foliojs/pdfkit/releases/download/v0.8.0/pdfkit.js"></script>
+      <script src="https://github.com/devongovett/blob-stream/releases/download/v0.1.3/blob-stream.js"></script>
+      <script src="pdf.js"></script>
+    <script>
+  function checkboxlimit(checkgroup, limit){
+	  var checkgroup=checkgroup
+	  var limit=limit
+	  for (var i=0; i<checkgroup.length; i++){
+		  checkgroup[i].onclick=function(){
+	  	var checkedcount=0
+		  for  (var i=0; i<checkgroup.length; i++)
+			  checkedcount+=(checkgroup[i].checked)? 1 : 0
+	  	if (checkedcount>limit){
+			  alert("You can only select a maximum of "+limit+" checkboxes")
+		  	this.checked=false
+			  }
+		  }
+  	}
   }
- .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-h1{
-   color: white;
-   font-family: "Bowlby One SC"; 
-   font-size: 28px;  
-   font-weight: 400; 
-   line-height: 20px;
-   font-style: normal; 
-   font-variant: normal;
-   
-   }
-  h2{
-   color: white;
-   font-family: "Bowlby One SC"; 
-   font-size: 20px;  
-   font-weight: 400; 
-   line-height: 20px;
-   font-style: normal; 
-   font-variant: normal;
-   margin-left: 200px;
-   
-   }
-   .cText{
-   text-align:center;
-    }
-.button{
-    display: block;
-    text-align: center;
-    font-size: 30px;
-    margin-left:auto;
-    margin-right: auto;
-    color:black;
-}
-
-p{
-   color: white;
-   font-family: "Bowlby One SC"; 
-   font-size: 20px;  
-   font-weight: 400; 
-   line-height: 20px;
-   font-style: normal; 
-   font-variant: normal;
-   
-}
-
-
-
-.container {
-  display: flex;
-  flex-flow: row;
-  min-height: 50px;
-  width:90%;
-  padding: 2%;
-  
-}
-.main {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  margin-left:4%;
-  margin-right:4%;
-  text-align: center;
-  font-size:20px;
-  height: 30%;
-  
-}
-.col {
-  margin: 2px;
-  border-style: solid;
-  border-color: black;
-}
-.names {
-    background: white;
-    margin-left: 2%;
-  }
-.traits {
-  background-color: white;
-  margin:2%;
-  width:100%
-}
-.right {
- margin-left:2%;
-background-color: white;
- width:80%;
-}
-
-table, td, th {
-  border: 1px solid black;
-  text-align:left;
-  font-size: 18px;
-  
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
- 
-}
-
-th {
-  height: 30%;
-  
-}
     
-
-.race{
-	height:300px;
-
-}
-.description{
-
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  width: 75%;
-  margin-left: auto;
-  margin-right:auto;
-}
-</style>
-<body>
-<a href = "https://seangillick.github.io/DNDEasy/index.html"> 
-    <img src = "https://i.imgur.com/VP0Shv3.png" height="120" width="30" class="logo"/>
-</a>
-
-<div class="container">
-        <div class="main">
-          <p>Dragonborn Names</p>
-          <div class="col names">Arjhan</div>
-          <div class="col names">Balasar</div>
-          <div class="col names">Donaar</div>
-          <div class="col names">Ghesh</div>
-          <div class="col names">Akra</div>
-          <div class="col names">Biri</div>
-          <div class="col names">Daar</div>
-          <div class="col names">Farideh</div>
-          <div class="col names">Harann</div>
-        </div>
-        <div class="main">
-          <p>Dragonborn Traits</p>
-          <div class="col traits">Strength increases by 2</div>
-          <div class="col traits">Charisma increses by 1</div>
-          <div class="col traits">Age quickly</div>
-          <div class="col traits">Taller and heavier than humans</div>
-          <div class="col traits">30 ft. walk speed</div>
-          <div class="col traits">Draconic Ancestry</div>
-        </div>
-        <div class = "main">
-          <p>Dragonborn</p>
-          <img src = "https://media-waterdeep.cursecdn.com/avatars/thumbnails/6/340/420/618/636272677995471928.png" class = "race"> 
-      </div>
-        <table class = "right">
-        <tr>
-          <th>Draconic Ancestory Color</th>
-          <th>Damage Type</th>
-          <th>Breath Weapon</th>
-        </tr>
-        <tr>
-          <td>Black</td>
-          <td>Acid</td>
-          <td>5 by 30ft. line (Dex. save)</td>
-        </tr>
-        <tr>
-          <td>Blue</td>
-          <td>Lightning</td>
-          <td>5 by 30ft. line (Dex. save)</td>
-        </tr>
-        <tr>
-          <td>Brass</td>
-          <td>Fire</td>
-          <td>5 by 30ft. line (Dex. save)</td>
-        </tr>
-        <tr>
-          <td>Bronze</td>
-          <td>Lightning</td>
-          <td>5 by 30ft. line (Dex. save)</td>
-        </tr>
-        <tr>
-          <tr>
-          <td>Copper</td>
-          <td>Acid</td>
-          <td>5 by 30ft. line (Dex. save)</td>
-        </tr>
-        <tr>
-          <td>Gold</td>
-          <td>Fire</td>
-          <td>15 ft. cone (Con. save)</td>
-        </tr>
-        <tr>
-          <td>Green</td>
-          <td>Poison</td>
-          <td>15 ft. cone (Con. save)</td>
-        </tr>
-        <tr>
-          <td>Red</td>
-          <td>Fire</td>
-          <td>15 ft. cone (Con. save)</td>
-        </tr>
-        <tr>
-          <td>Silver</td>
-          <td>Cold</td>
-          <td>15 ft. cone (Con. save)</td>
-        </tr>
-        <tr>
-          <td>White</td>
-          <td>Cold</td>
-          <td>15 ft. cone (Con. save)</td>
-        </tr>
-      </table>
-</div>
-<div class = "description">
-  <p>The Dragonborn are an ancient and proud race. Born of the dragon's blood, each has inate magic power and breath weapons to aid them.
-    Dragonborns are naturally resistant to their ancestral element and can bend it to their whims without a second though. If you
-    ever see one, your best options are to keep your head low.</p>
-  </p>
-</div>
-<br>
-<button class = "button" onclick="chooseRaceDragonborn(); forward()">Select This Race</button>
-<br>
-<button class = "button" onclick="goBack()">Go Back</button>
-
-</body>
-</html>
+    function goBack() {
+      window.history.back()
+    }
+    
+    function forward(){
+            window.location='https://seangillick.github.io/DNDEasy/PointBuy.html';
+    }
+    </script>
+    </head>
+    <style>
+    body{
+        background-color: rgb(86, 86, 86);
+        background-size: cover;
+      }
+     .logo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    h1{
+       color: white;
+       font-family: "Bowlby One SC"; 
+       font-size: 28px;  
+       font-weight: 400; 
+       line-height: 20px;
+       font-style: normal; 
+       font-variant: normal;
+       
+       }
+      h2{
+       color: white;
+       font-family: "Bowlby One SC"; 
+       font-size: 20px;  
+       font-weight: 400; 
+       line-height: 20px;
+       font-style: normal; 
+       font-variant: normal;
+       margin-left: 200px;
+       
+       }
+       .cText{
+       text-align:center;
+        }
+    .button{
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        margin-left:auto;
+        margin-right: auto;
+        color:black;
+    }
+    
+    p{
+       color: white;
+       font-family: "Bowlby One SC"; 
+       font-size: 20px;  
+       font-weight: 400; 
+       line-height: 20px;
+       font-style: normal; 
+       font-variant: normal;
+       
+    }
+    
+    
+    
+    .container {
+      display: flex;
+      flex-flow: row;
+      min-height: 50px;
+      width:90%;
+      padding: 1%;
+      
+    }
+    .main {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      margin-left:4%;
+      margin-right:4%;
+      text-align: center;
+      font-size:20px;
+      height: 30%;
+      
+    }
+    .col {
+      margin: 2px;
+      border-style: solid;
+      border-color: black;
+    }
+    .names {
+        background: white;
+        margin-left: 2%;
+      }
+    .traits {
+      background-color: white;
+      margin:2%;
+      width:100%
+    }
+    .right {
+     margin-left:2%;
+    background-color: white;
+     width:80%;
+    }
+    
+    table, td, th {
+      border: 1px solid black;
+      text-align:left;
+      font-size: 18px;
+      
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom:0%;
+     
+    }
+    
+    th {
+      height: 30%;
+      
+    }
+        
+    
+    .race{
+      height:300px;
+    
+    }
+    .description{
+    
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      width: 75%;
+      margin-left: auto;
+      margin-right:auto;
+    }
+    </style>
+    <body>
+    <a href = "https://seangillick.github.io/DNDEasy/index.html"> 
+        <img src = "https://i.imgur.com/VP0Shv3.png" height="120" width="30" class="logo"/>
+    </a>
+    
+    <div class="container">
+            <div class="main">
+              <p>Dragonborn Names</p>
+              <div class="col names">Arjhan</div>
+              <div class="col names">Balasar</div>
+              <div class="col names">Donaar</div>
+              <div class="col names">Ghesh</div>
+              <div class="col names">Akra</div>
+              <div class="col names">Biri</div>
+              <div class="col names">Daar</div>
+              <div class="col names">Farideh</div>
+              <div class="col names">Harann</div>
+            </div>
+            <div class="main">
+              <p>Dragonborn Traits</p>
+              <div class="col traits">Strength increases by 2</div>
+              <div class="col traits">Charisma increses by 1</div>
+              <div class="col traits">Age quickly</div>
+              <div class="col traits">Taller and heavier than humans</div>
+              <div class="col traits">30 ft. walk speed</div>
+              <div class="col traits">Draconic Ancestry</div>
+            </div>
+            <div class = "main">
+              <p>Dragonborn</p>
+              <img src = "https://media-waterdeep.cursecdn.com/avatars/thumbnails/6/340/420/618/636272677995471928.png" class = "race"> 
+          </div>
+            <table class = "right">
+                <form id = "dragonborn" name = "dragonborn">
+            <tr>
+              <th>Draconic Ancestory Color (choose 1)</th>
+              <th>Damage Type</th>
+              <th>Breath Weapon</th>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="color" />Black<br/></div></td>
+              <td>Acid</td>
+              <td>5 by 30ft. line (Dex. save)</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="color" />Blue<br/></div></td>
+              <td>Lightning</td>
+              <td>5 by 30ft. line (Dex. save)</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="color" />Brass<br/></div></td>
+              <td>Fire</td>
+              <td>5 by 30ft. line (Dex. save)</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="color" />Bronze<br/></div></td>
+              <td>Lightning</td>
+              <td>5 by 30ft. line (Dex. save)</td>
+            </tr>
+            <tr>
+              <tr>
+              <td><input type="checkbox" name="color" />Copper<br/></div></td>
+              <td>Acid</td>
+              <td>5 by 30ft. line (Dex. save)</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="color" />Gold<br/></div></td>
+              <td>Fire</td>
+              <td>15 ft. cone (Con. save)</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="color" />Green<br/></div></td>
+              <td>Poison</td>
+              <td>15 ft. cone (Con. save)</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="color" />Red<br/></div></td>
+              <td>Fire</td>
+              <td>15 ft. cone (Con. save)</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="color" />Silver<br/></div></td>
+              <td>Cold</td>
+              <td>15 ft. cone (Con. save)</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="color" />White<br/></div></td>
+              <td>Cold</td>
+              <td>15 ft. cone (Con. save)</td>
+            </tr>
+          </table>
+        </form>
+        <script type="text/javascript">
+          checkboxlimit(document.forms.dragonborn.color, 1)
+      </script>
+    </div>
+    <div class = "description">
+      <p>The Dragonborn are an ancient and proud race. Born of the dragon's blood, each has inate magic power and breath weapons to aid them.
+        Dragonborns are naturally resistant to their ancestral element and can bend it to their whims without a second though. If you
+        ever see one, your best options are to keep your head low.</p>
+    </div>
+    <button class = "button" onclick="chooseRaceDragonborn(); forward()">Select This Race</button>
+    <br>
+    <button class = "button" onclick="goBack()">Go Back</button>
+    
+    </body>
+    </html>
+    
