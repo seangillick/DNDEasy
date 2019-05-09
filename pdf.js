@@ -1,8 +1,12 @@
-var button = document.getElementsByClassName("testButton");
+//This is the PDF.js file that creates the pdf for DnDeasy
+//Created by Grant Fecteau
+//Implements pdfkit module as well as blobstream
+
 testinput = ""
 race = ""
 cClass = ""
 spells = false
+
 localStorage.racialBonChar = 0
 localStorage.racialBonStr = 0
 localStorage.racialBonWis = 0
@@ -10,6 +14,14 @@ localStorage.racialBonDex = 0
 localStorage.racialBonCon = 0
 localStorage.racialBonInt = 0
 speed = ""
+
+strMod = 0
+chaMod = 0
+dexMod = 0
+intMod = 0
+conMod = 0
+wisMod = 0
+
 
 function testFunction(){
     localStorage.testinput = "Yeehaw";
@@ -27,6 +39,15 @@ function chooseClass(){
     localStorage.cClass = "Wizard"
     localStorage.spells = true
     localStorage.proficiency = "2"
+
+}
+
+function chooseSubclass(){
+    localStorage.cClass += ", School of Abjuration"
+}
+
+function buyPoints(){
+    
 
 }
 
