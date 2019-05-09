@@ -1,11 +1,5 @@
 <!DOCTYPE html> 
-<html>
-   <head>
-  <script src="https://github.com/foliojs/pdfkit/releases/download/v0.8.0/pdfkit.js"></script>
-  <script src="https://github.com/devongovett/blob-stream/releases/download/v0.1.3/blob-stream.js"></script>
-  <script src="pdf.js"></script>
-   </head>
-   
+<html> 
    <body>
       <a href = "https://seangillick.github.io/DNDEasy/index.html"> 
       <img src = "https://i.imgur.com/VP0Shv3.png" height="120" width="30" class="logo">
@@ -83,13 +77,14 @@
 <div align="center">
 <script> 
    function StartingForm() {
-      document.getElementById("str").selectedIndex = localStorage.racialBonStr;
-      document.getElementById("dex").selectedIndex = localStorage.racialBonDex;
-      document.getElementById("con").selectedIndex = localStorage.racialBonCon;
-      document.getElementById("iq").selectedIndex = localStorage.racialBonInt;
-      document.getElementById("wis").selectedIndex = localStorage.racialBonWis;
-      document.getElementById("cha").selectedIndex = localStorage.racialBonChar;
- 
+      document.getElementById("str").selectedIndex = 0;
+      document.getElementById("dex").selectedIndex = 0;
+      document.getElementById("con").selectedIndex = 0;
+      document.getElementById("iq").selectedIndex = 0;
+      document.getElementById("wis").selectedIndex = 0;
+      document.getElementById("cha").selectedIndex = 0;
+
+
       addPoints();
    }
   
@@ -100,6 +95,13 @@
       var iq = parseInt(document.getElementById("iq").value);
       var wis = parseInt(document.getElementById("wis").value);
       var cha = parseInt(document.getElementById("cha").value);
+
+      document.getElementById("strMod").selectedIndex = localStorage.racialBonStr;
+      document.getElementById("dexMod").selectedIndex = localStorage.racialBonDex;
+      document.getElementById("conMod").selectedIndex = localStorage.racialBonCon;
+      document.getElementById("iqMod").selectedIndex = localStorage.racialBonInt;
+      document.getElementById("wisMod").selectedIndex = localStorage.racialBonWis;
+      document.getElementById("chaMod").selectedIndex = localStorage.racialBonChar;
       
       var strMod = parseInt(document.getElementById("strMod").value);
       var dexMod = parseInt(document.getElementById("dexMod").value);
@@ -137,7 +139,7 @@
        alert("Total points too high, make sure it's 27.");
      }
      if(x == 27){
-     window.location.href = "https://seangillick.github.io/DNDEasy/spells.html";
+      window.location.href = "https://seangillick.github.io/DNDEasy/spells.html";
      }
     }
    
@@ -257,6 +259,6 @@
   </tr> 
   </tbody></table> 
   <div class="total"><p>Total Points: <span id="totalPoints" class="total_points">0</span>/27</p></div> 
-  <button class = "button" onclick="errorTrap()">Submit</button>
+  <button class = "button" onclick="errorTrap()">Continue</button>
 
 </body></html>
