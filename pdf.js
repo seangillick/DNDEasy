@@ -7,12 +7,12 @@ race = ""
 cClass = ""
 spells = false
 
-localStorage.racialBonChar = 0
-localStorage.racialBonStr = 0
-localStorage.racialBonWis = 0
-localStorage.racialBonDex = 0
-localStorage.racialBonCon = 0
-localStorage.racialBonInt = 0
+racialBonChar = 0
+racialBonStr = 0
+racialBonWis = 0
+racialBonDex = 0
+racialBonCon = 0
+racialBonInt = 0
 speed = ""
 
 strMod = 0
@@ -31,6 +31,10 @@ function chooseRaceDragonborn(){
     localStorage.race = "Dragonborn";
     localStorage.racialBonStr = 2
     localStorage.racialBonChar = 1
+    localStorage.racialBonDex = 0
+    localStorage.racialBonInt = 0
+    localStorage.racialBonWis = 0
+    localStorage.racialBonCon = 0
     localStorage.speed =  "30ft."
     
 }
