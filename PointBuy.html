@@ -113,12 +113,12 @@
       var wisMod = parseInt(document.getElementById("wisMod").value);
       var chaMod = parseInt(document.getElementById("chaMod").value);
  
-      var strTotal = parseInt(document.getElementById("str").options[document.getElementById("str").selectedIndex].text) + parseInt(strMod);
-      var dexTotal = parseInt(document.getElementById("dex").options[document.getElementById("dex").selectedIndex].text) + parseInt(dexMod);
-      var conTotal = parseInt(document.getElementById("con").options[document.getElementById("con").selectedIndex].text) + parseInt(conMod);
-      var iqTotal = parseInt(document.getElementById("iq").options[document.getElementById("iq").selectedIndex].text) + parseInt(iqMod);
-      var wisTotal = parseInt(document.getElementById("wis").options[document.getElementById("wis").selectedIndex].text) + parseInt(wisMod);
-      var chaTotal = parseInt(document.getElementById("cha").options[document.getElementById("cha").selectedIndex].text) + parseInt(chaMod);
+      localStorage.strTotal = parseInt(document.getElementById("str").options[document.getElementById("str").selectedIndex].text) + parseInt(strMod);
+      localStorage.dexTotal = parseInt(document.getElementById("dex").options[document.getElementById("dex").selectedIndex].text) + parseInt(dexMod);
+      localStorage.conTotal = parseInt(document.getElementById("con").options[document.getElementById("con").selectedIndex].text) + parseInt(conMod);
+      localStorage.iqTotal = parseInt(document.getElementById("iq").options[document.getElementById("iq").selectedIndex].text) + parseInt(iqMod);
+      localStorage.wisTotal = parseInt(document.getElementById("wis").options[document.getElementById("wis").selectedIndex].text) + parseInt(wisMod);
+      localStorage.chaTotal = parseInt(document.getElementById("cha").options[document.getElementById("cha").selectedIndex].text) + parseInt(chaMod);
  
       document.getElementById("strTotal").innerHTML = strTotal;
       document.getElementById("dexTotal").innerHTML = dexTotal;
