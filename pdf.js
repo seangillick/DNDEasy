@@ -1,15 +1,33 @@
 var button = document.getElementsByClassName("testButton");
 testinput = ""
 race = ""
+cClass = ""
+spells = false
+localStorage.racialBonChar = 0
+localStorage.racialBonStr = 0
+localStorage.racialBonWis = 0
+localStorage.racialBonDex = 0
+localStorage.racialBonCon = 0
+localStorage.racialBonInt = 0
+speed = ""
 
 function testFunction(){
     localStorage.testinput = "Yeehaw";
 }
 
-function chooseRace(){
+function chooseRaceDragonborn(){
     localStorage.race = "Dragonborn";
+    localStorage.racialBonStr = 2
+    localStorage.racialBonChar = 1
+    localStorage.speed =  "30ft."
     
-    
+}
+
+function chooseClass(){
+    localStorage.cClass = "Wizard"
+    localStorage.spells = true
+    localStorage.proficiency = "2"
+
 }
 
 const doc = new PDFDocument();
@@ -21,12 +39,12 @@ doc.image('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBQYFBAYGBQ
 function fillBoxes(){
     doc.fontSize(12);
     doc.text(localStorage.testinput,55,64)//char name
-    doc.text("Class",273,52)//char class
+    doc.text(localStorage.cClass,273,52)//char class
     doc.text('Timothy',485,52)//player name
     doc.text(localStorage.race,273,79)//char race
     doc.text('Alignment',379,79)//char alignment
     doc.text('EXP',485,79)//char exp
-    doc.text('+2',55,130)//char prof
+    doc.text(localStorage.proficiency,55,130)//char prof
     doc.text('0',61,189)//char str
     doc.text('0',61,258)//char dex
     doc.text('0',61,327)//char con
@@ -62,7 +80,7 @@ function fillBoxes(){
     doc.fontSize(18);
     doc.text('0',238,140)//Armor Class
     doc.text('0',468,142)//Initiative
-    doc.text('30',535,142,{
+    doc.text(localStorage.speed,535,142,{
         width: 550
     }
     );
