@@ -1,11 +1,29 @@
 
+
 <html>
         <head>
           <script src="https://github.com/foliojs/pdfkit/releases/download/v0.8.0/pdfkit.js"></script>
           <script src="https://github.com/devongovett/blob-stream/releases/download/v0.1.3/blob-stream.js"></script>
           <script src="pdf.js"></script>
         <script>
-        
+
+function checkboxlimit(checkgroup, limit){
+	var checkgroup=checkgroup
+	var limit=limit
+	for (var i=0; i<checkgroup.length; i++){
+		checkgroup[i].onclick=function(){
+		var checkedcount=0
+		for (var i=0; i<checkgroup.length; i++)
+			checkedcount+=(checkgroup[i].checked)? 1 : 0
+		if (checkedcount>limit){
+			alert("You can only select a maximum of "+limit+" checkboxes")
+			this.checked=false
+			}
+		}
+	}
+}
+
+
         function goBack() {
           window.history.back()
         }
@@ -164,13 +182,18 @@
                 </div>
                 <div class="main">
                   <p>Wizard Skills (choose 2)</p>
-                  <div class="col traits">Arcana</div>
-                  <div class="col traits">History</div>
-                  <div class="col traits">Insight</div>
-                  <div class="col traits">Investigation</div>
-                  <div class="col traits">Medicine</div>
-                  <div class="col traits">Religion</div>
+                  <form id = "wizard" name = "wizard">
+                  <div class="col traits"><input type="checkbox" name="skills" /> Arcana<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> History<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> Insight<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> Investigation<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> Medicine<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> Religion<br/></div>
+                </form>
                 </div>
+                <script type="text/javascript">
+                    checkboxlimit(document.forms.wizard.skills, 2)
+                </script>
                 <div class = "main">
                   <p>Wizard</p>
                   <img src = "https://media-waterdeep.cursecdn.com/avatars/thumbnails/6/357/420/618/636272696881281556.png" class = "race"> 
@@ -284,7 +307,7 @@
               </table>
         </div>
         <div class = "description">
-          <p>We need to give a brief description of the wizard class here</p>
+          <p>We need to give a breif description of the wizard class here</p>
         </div>
         <button class = "button" onclick="chooseClass(); forward()">Select This Class</button>
         <br>
