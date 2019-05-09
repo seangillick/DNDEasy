@@ -77,12 +77,12 @@
 <div align="center">
 <script> 
    function StartingForm() {
-      document.getElementById("str").selectedIndex = 0;
-      document.getElementById("dex").selectedIndex = 0;
-      document.getElementById("con").selectedIndex = 0;
-      document.getElementById("iq").selectedIndex = 0;
-      document.getElementById("wis").selectedIndex = 0;
-      document.getElementById("cha").selectedIndex = 0;
+      document.getElementById("str").selectedIndex = localStorage.racialBonStr;
+      document.getElementById("dex").selectedIndex = localStorage.racialBonDex;
+      document.getElementById("con").selectedIndex = localStorage.racialBonCon;
+      document.getElementById("iq").selectedIndex = localStorage.racialBonInt;
+      document.getElementById("wis").selectedIndex = localStorage.racialBonWis;
+      document.getElementById("cha").selectedIndex = localStorage.racialBonChar;
  
       addPoints();
    }
