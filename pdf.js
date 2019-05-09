@@ -39,6 +39,8 @@ function chooseClass(){
     localStorage.cClass = "Wizard"
     localStorage.spells = true
     localStorage.proficiency = "2"
+    localStorage.hitDice = "1d6"
+    localStorage.hitPoints = 6+localStorage.Con
 
 }
 
@@ -110,8 +112,8 @@ function fillBoxes(){
     doc.text('0',337,143)//Armor
     doc.text('0',377,143)//Shield
     doc.text('0',419,143)//Misc
-    doc.text('0',330,209)//Max HP
-    doc.text('0',263,264)//Hit dice tot
+    doc.text(localStorage.hitPoints,330,209)//Max HP
+    doc.text(localStorage.hitDice,263,264)//Hit dice tot
     doc.text('Ski',240,340)//Spell casting
     doc.text('0',300,340)//SpellSave
     doc.text('0',360,340)//Spell Attk Bonus
