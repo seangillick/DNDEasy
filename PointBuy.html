@@ -120,6 +120,18 @@
       document.getElementById("totalPoints").innerHTML = totalPF;
 
    }
+
+   function errorTrap() {
+     var x;
+     x = document.getElementById("totalPoints").innerHTML;
+     if(x < 27) {
+       alert("Total points too low, make sure it's 27.");
+     } 
+     if(x > 27) {
+       alert("Total points too high, make sure it's 27.");
+     }
+    }
+   
 </script> 
 
 <table> 
@@ -133,14 +145,14 @@
     <td>Strength</td> 
     <td> 
       <select id="str" onchange=addPoints();> 
-         <option value="0" selected="">8</option> 
-         <option value="1">9 (1)</option> 
-         <option value="2">10 (2)</option> 
-         <option value="3">11 (3)</option> 
-         <option value="4">12 (4)</option> 
-         <option value="5">13 (5)</option> 
-         <option value="6">14 (6)</option> 
-         <option value="7">15 (7)</option> 
+        <option value="0" selected="">8</option> 
+        <option value="1">9 (+1)</option> 
+        <option value="2">10 (+2)</option> 
+        <option value="3">11 (+3)</option> 
+        <option value="4">12 (+4)</option> 
+        <option value="5">13 (+5)</option> 
+        <option value="6">14 (+6)</option> 
+        <option value="7">15 (+7)</option> 
       </select> 
     </td> 
     <td><input type="text" size="3" id="strMod" value="0" onchange=addPoints();></td> 
@@ -151,14 +163,14 @@
     <td>Dexterity</td> 
     <td> 
       <select id="dex" onchange=addPoints();> 
-         <option value="0" selected="">8</option> 
-         <option value="1">9 (1)</option> 
-         <option value="2">10 (2)</option> 
-         <option value="3">11 (3)</option> 
-         <option value="4">12 (4)</option> 
-         <option value="5">13 (5)</option> 
-         <option value="6">14 (6)</option> 
-         <option value="7">15 (7)</option> 
+        <option value="0" selected="">8</option> 
+        <option value="1">9 (+1)</option> 
+        <option value="2">10 (+2)</option> 
+        <option value="3">11 (+3)</option> 
+        <option value="4">12 (+4)</option> 
+        <option value="5">13 (+5)</option> 
+        <option value="6">14 (+6)</option> 
+        <option value="7">15 (+7)</option> 
       </select> 
     </td> 
     <td><input type="text" size="3" id="dexMod" value="0" onchange=addPoints();></td> 
@@ -168,14 +180,14 @@
     <td>Constitution</td> 
     <td> 
       <select id="con" onchange=addPoints();> 
-         <option value="0" selected="">8</option> 
-         <option value="1">9 (1)</option> 
-         <option value="2">10 (2)</option> 
-         <option value="3">11 (3)</option> 
-         <option value="4">12 (4)</option> 
-         <option value="5">13 (5)</option> 
-         <option value="6">14 (6)</option> 
-         <option value="7">15 (7)</option> 
+        <option value="0" selected="">8</option> 
+        <option value="1">9 (+1)</option> 
+        <option value="2">10 (+2)</option> 
+        <option value="3">11 (+3)</option> 
+        <option value="4">12 (+4)</option> 
+        <option value="5">13 (+5)</option> 
+        <option value="6">14 (+6)</option> 
+        <option value="7">15 (+7)</option> 
       </select> 
     </td> 
     <td><input type="text" size="3" id="conMod" value="0" onchange=addPoints();></td> 
@@ -187,13 +199,13 @@
     <td> 
       <select id="iq" onchange=addPoints();> 
          <option value="0" selected="">8</option> 
-         <option value="1">9 (1)</option> 
-         <option value="2">10 (2)</option> 
-         <option value="3">11 (3)</option> 
-         <option value="4">12 (4)</option> 
-         <option value="5">13 (5)</option> 
-         <option value="6">14 (6)</option> 
-         <option value="7">15 (7)</option> 
+         <option value="1">9 (+1)</option> 
+         <option value="2">10 (+2)</option> 
+         <option value="3">11 (+3)</option> 
+         <option value="4">12 (+4)</option> 
+         <option value="5">13 (+5)</option> 
+         <option value="6">14 (+6)</option> 
+         <option value="7">15 (+7)</option> 
       </select> 
     </td> 
     <td><input type="text" size="3" id="iqMod" value="0" onchange=addPoints();></td> 
@@ -203,14 +215,14 @@
     <td>Wisdom</td> 
     <td> 
       <select id="wis" onchange=addPoints();> 
-         <option value="0" selected="">8</option> 
-         <option value="1">9 (1)</option> 
-         <option value="2">10 (2)</option> 
-         <option value="3">11 (3)</option> 
-         <option value="4">12 (4)</option> 
-         <option value="5">13 (5)</option> 
-         <option value="6">14 (6)</option> 
-         <option value="7">15 (7)</option> 
+        <option value="0" selected="">8</option> 
+        <option value="1">9 (+1)</option> 
+        <option value="2">10 (+2)</option> 
+        <option value="3">11 (+3)</option> 
+        <option value="4">12 (+4)</option> 
+        <option value="5">13 (+5)</option> 
+        <option value="6">14 (+6)</option> 
+        <option value="7">15 (+7)</option>  
       </select> 
     </td> 
     <td><input type="text" size="3" id="wisMod" value="0" onchange=addPoints();></td> 
@@ -221,14 +233,14 @@
     <td>Charisma</td> 
     <td> 
       <select id="cha" onchange=addPoints();> 
-         <option value="0" selected="">8</option> 
-         <option value="1">9 (1)</option> 
-         <option value="2">10 (2)</option> 
-         <option value="3">11 (3)</option> 
-         <option value="4">12 (4)</option> 
-         <option value="5">13 (5)</option> 
-         <option value="6">14 (6)</option> 
-         <option value="7">15 (7)</option> 
+        <option value="0" selected="">8</option> 
+        <option value="1">9 (+1)</option> 
+        <option value="2">10 (+2)</option> 
+        <option value="3">11 (+3)</option> 
+        <option value="4">12 (+4)</option> 
+        <option value="5">13 (+5)</option> 
+        <option value="6">14 (+6)</option> 
+        <option value="7">15 (+7)</option> 
       </select> 
     </td> 
     <td><input type="text" size="3" id="chaMod" value="0" onchange=addPoints();></td> 
@@ -236,4 +248,6 @@
   </tr> 
   </tbody></table> 
   <div class="total"><p>Total Points: <span id="totalPoints" class="total_points">0</span>/27</p></div> 
+  <button class = "button" onclick="errorTrap()">Submit</button>
+
 </body></html>
