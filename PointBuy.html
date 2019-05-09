@@ -83,8 +83,6 @@
       document.getElementById("iq").selectedIndex = 0;
       document.getElementById("wis").selectedIndex = 0;
       document.getElementById("cha").selectedIndex = 0;
-
-
       addPoints();
    }
   
@@ -96,12 +94,12 @@
       var wis = parseInt(document.getElementById("wis").value);
       var cha = parseInt(document.getElementById("cha").value);
 
-      document.getElementById("strMod").selectedIndex = localStorage.racialBonStr;
-      document.getElementById("dexMod").selectedIndex = localStorage.racialBonDex;
-      document.getElementById("conMod").selectedIndex = localStorage.racialBonCon;
-      document.getElementById("iqMod").selectedIndex = localStorage.racialBonInt;
-      document.getElementById("wisMod").selectedIndex = localStorage.racialBonWis;
-      document.getElementById("chaMod").selectedIndex = localStorage.racialBonChar;
+      document.getElementById("strMod").value = localStorage.racialBonStr;
+      document.getElementById("dexMod").value = localStorage.racialBonDex;
+      document.getElementById("conMod").value = localStorage.racialBonCon;
+      document.getElementById("iqMod").value = localStorage.racialBonInt;
+      document.getElementById("wisMod").value = localStorage.racialBonWis;
+      document.getElementById("chaMod").value = localStorage.racialBonChar;
       
       var strMod = parseInt(document.getElementById("strMod").value);
       var dexMod = parseInt(document.getElementById("dexMod").value);
@@ -123,12 +121,9 @@
       document.getElementById("iqTotal").innerHTML = iqTotal;
       document.getElementById("wisTotal").innerHTML = wisTotal;
       document.getElementById("chaTotal").innerHTML = chaTotal;
-
       var totalPF = str + dex + con + iq + wis + cha;    
       document.getElementById("totalPoints").innerHTML = totalPF;
-
    }
-
    function errorTrap() {
      var x;
      x = document.getElementById("totalPoints").innerHTML;
