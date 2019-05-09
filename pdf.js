@@ -31,10 +31,6 @@ function chooseRaceDragonborn(){
     localStorage.race = "Dragonborn";
     localStorage.racialBonStr = 2
     localStorage.racialBonChar = 1
-    localStorage.racialBonDex = 0
-    localStorage.racialBonInt = 0
-    localStorage.racialBonWis = 0
-    localStorage.racialBonCon = 0
     localStorage.speed =  "30ft."
     
 }
@@ -54,7 +50,6 @@ function chooseSubclass(){
 
 function buyPoints(){
     
-
 }
 
 const doc = new PDFDocument();
@@ -72,12 +67,12 @@ function fillBoxes(){
     doc.text('Alignment',379,79)//char alignment
     doc.text('EXP',485,79)//char exp
     doc.text(localStorage.proficiency,55,130)//char prof
-    doc.text('0',61,189)//char str
-    doc.text('0',61,258)//char dex
-    doc.text('0',61,327)//char con
-    doc.text('0',61,396)//char int
-    doc.text('0',61,465)//char wis
-    doc.text('0',61,534)//char cha
+    doc.text(localStorage.strTotal,61,189)//char str
+    doc.text(localStorage.dexTotal,61,258)//char dex
+    doc.text(localStorage.conTotal,61,327)//char con
+    doc.text(localStorage.iqTotal,61,396)//char int
+    doc.text(localStorage.wisTotal,61,465)//char wis
+    doc.text(localStorage.chaTotal,61,534)//char cha
     doc.text('0',61,600)//passive per
     doc.fontSize(8);
     doc.text('0',118,187)//Str Saving throws
@@ -107,7 +102,7 @@ function fillBoxes(){
     doc.fontSize(18);
     doc.text('0',238,140)//Armor Class
     doc.text('0',468,142)//Initiative
-    doc.text(localStorage.speed,535,142,{
+    doc.text(localStorage.speed,530,142,{
         width: 550
     }
     );
