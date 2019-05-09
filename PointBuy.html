@@ -120,12 +120,12 @@
       localStorage.wisTotal = parseInt(document.getElementById("wis").options[document.getElementById("wis").selectedIndex].text) + parseInt(wisMod);
       localStorage.chaTotal = parseInt(document.getElementById("cha").options[document.getElementById("cha").selectedIndex].text) + parseInt(chaMod);
  
-      document.getElementById("strTotal").innerHTML = strTotal;
-      document.getElementById("dexTotal").innerHTML = dexTotal;
-      document.getElementById("conTotal").innerHTML = conTotal;
-      document.getElementById("iqTotal").innerHTML = iqTotal;
-      document.getElementById("wisTotal").innerHTML = wisTotal;
-      document.getElementById("chaTotal").innerHTML = chaTotal;
+      document.getElementById("strTotal").innerHTML = localStorage.strTotal;
+      document.getElementById("dexTotal").innerHTML = localStorage.dexTotal;
+      document.getElementById("conTotal").innerHTML = localStorage.conTotal;
+      document.getElementById("iqTotal").innerHTML = localStorage.iqTotal;
+      document.getElementById("wisTotal").innerHTML = localStorage.wisTotal;
+      document.getElementById("chaTotal").innerHTML = localStorage.chaTotal;
       var totalPF = str + dex + con + iq + wis + cha;    
       document.getElementById("totalPoints").innerHTML = totalPF;
    }
