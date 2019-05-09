@@ -38,7 +38,7 @@ function chooseRaceDragonborn(){
 function chooseClass(){
     localStorage.cClass = "Wizard"
     localStorage.spells = true
-    localStorage.proficiency = "2"
+    localStorage.proficiency = "+2"
     localStorage.hitDice = "1d6"
     localStorage.hitPoints = 6+localStorage.conMod
 
@@ -67,12 +67,12 @@ function fillBoxes(){
     doc.text('Alignment',379,79)//char alignment
     doc.text('EXP',485,79)//char exp
     doc.text(localStorage.proficiency,55,130)//char prof
-    doc.text(localStorage.strTotal,61,189)//char str
-    doc.text(localStorage.dexTotal,61,258)//char dex
-    doc.text(localStorage.conTotal,61,327)//char con
-    doc.text(localStorage.iqTotal,61,396)//char int
-    doc.text(localStorage.wisTotal,61,465)//char wis
-    doc.text(localStorage.chaTotal,61,534)//char cha
+    doc.text(localStorage.strTotal,58,189)//char str
+    doc.text(localStorage.dexTotal,58,258)//char dex
+    doc.text(localStorage.conTotal,58,327)//char con
+    doc.text(localStorage.iqTotal,58,396)//char int
+    doc.text(localStorage.wisTotal,58,465)//char wis
+    doc.text(localStorage.chaTotal,58,534)//char cha
     doc.text('0',61,600)//passive per
     doc.fontSize(8);
     doc.text('0',118,187)//Str Saving throws
@@ -112,7 +112,7 @@ function fillBoxes(){
     doc.text('0',377,143)//Shield
     doc.text('0',419,143)//Misc
     doc.text(localStorage.hitPoints,330,209)//Max HP
-    doc.text(localStorage.hitDice,263,264)//Hit dice tot
+    doc.text(localStorage.hitDice,260,264)//Hit dice tot
     doc.text('Ski',240,340)//Spell casting
     doc.text('0',300,340)//SpellSave
     doc.text('0',360,340)//Spell Attk Bonus
