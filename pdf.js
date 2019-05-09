@@ -40,7 +40,7 @@ function chooseClass(){
     localStorage.spells = true
     localStorage.proficiency = "2"
     localStorage.hitDice = "1d6"
-    localStorage.hitPoints = 6+localStorage.Con
+    localStorage.hitPoints = 6+localStorage.conMod
 
 }
 
