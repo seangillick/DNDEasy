@@ -61,22 +61,22 @@ function chooseClass(){
     localStorage.hitDice = "1d6"
     localStorage.hitPoints = 6+localStorage.conMod
     
-    if (document.getElementById("arcana").checked == true){
+    if (document.getElementById("arcana").checked){
         localStorage.profArcana = true
     }
-    if (document.getElementById("history").checked== true){
+    if (document.getElementById("history").checked){
         localStorage.profHistory = true
     }
-    if (document.getElementById("insight").checked==true){
+    if (document.getElementById("insight").checked){
         localStorage.profInsight = true
     }
-    if (document.getElementById("investigation").checked==true){
+    if (document.getElementById("investigation").checked){
         localStorage.profInvestigation = true
     }
-    if (document.getElementById("medicine").checked==true){
+    if (document.getElementById("medicine").checked){
         localStorage.profMedicine = true
     }
-    if (document.getElementById("religion").checked==true){
+    if (document.getElementById("religion").checked){
         localStorage.profReligion = true
     }
 }
@@ -161,22 +161,22 @@ function buyPoints(){
     localStorage.performanceMod = localStorage.chaMod
     localStorage.persuasionMod = localStorage.chaMod
     
-    if (localStorage.profArcana == true){
+    if (localStorage.profArcana){
         localStorage.arcanaMod = localStorage.arcanaMod + localStorage.proficiency
     }
-    if (localStorage.profHistory== true){
+    if (localStorage.profHistory){
         localStorage.historyMod = localStorage.historyMod + localStorage.proficiency
     }
-    if (localStorage.profInsight==true){
+    if (localStorage.profInsight){
         localStorage.insightMod = localStorage.insightMod + localStorage.proficiency
     }
-    if (localStorage.profInvestigation==true){
+    if (localStorage.profInvestigation){
         localStorage.investigationMod = localStorage.investigationMod + localStorage.proficiency
     }
-    if (localStorage.profMedicine==true){
+    if (localStorage.profMedicine){
         localStorage.medicineMod = localStorage.medicineMod + localStorage.proficiency
     }
-    if (localStorage.profReligion==true){
+    if (localStorage.profReligion){
         localStorage.religionMod = localStorage.religionMod + localStorage.proficiency
     }
     
