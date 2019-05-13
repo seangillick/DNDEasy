@@ -162,22 +162,22 @@ function buyPoints(){
     localStorage.persuasionMod = localStorage.chaMod
     
     if (localStorage.profArcana == true){
-        localStorage.arcanaMod += localStorage.proficiency
+        localStorage.arcanaMod = localStorage.arcanaMod + localStorage.proficiency
     }
     if (localStorage.profHistory== true){
-        localStorage.historyMod += localStorage.proficiency
+        localStorage.historyMod = localStorage.historyMod + localStorage.proficiency
     }
     if (localStorage.profInsight==true){
-        localStorage.insightMod += localStorage.proficiency
+        localStorage.insightMod = localStorage.insightMod + localStorage.proficiency
     }
     if (localStorage.profInvestigation==true){
-        localStorage.investigationMod += localStorage.proficiency
+        localStorage.investigationMod = localStorage.investigationMod + localStorage.proficiency
     }
     if (localStorage.profMedicine==true){
-        localStorage.medicineMod += localStorage.proficiency
+        localStorage.medicineMod = localStorage.medicineMod + localStorage.proficiency
     }
     if (localStorage.profReligion==true){
-        localStorage.religionMod += localStorage.proficiency
+        localStorage.religionMod = localStorage.religionMod + localStorage.proficiency
     }
     
     localStorage.passivePer = 10 + parseInt(localStorage.wisMod)
