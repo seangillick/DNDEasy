@@ -50,6 +50,7 @@ function chooseSubclass(){
 
 function buyPoints(){
     
+    
 }
 
 const doc = new PDFDocument();
@@ -73,6 +74,13 @@ function fillBoxes(){
     doc.text(localStorage.iqTotal,58,396)//char int
     doc.text(localStorage.wisTotal,58,465)//char wis
     doc.text(localStorage.chaTotal,58,534)//char cha
+    doc.fontSize(14);
+    doc.text(localStorage.strMod,56,212)//Str mod
+    doc.text(localStorage.dexMod,56,280)//Dex Mod
+    doc.text(localStorage.conMod,56,349)//Con mod
+    doc.text(localStorage.intMod,56,417)//int mod
+    doc.text(localStorage.wisMod,56,485)//wis mod 
+    doc.text(localStorage.chaMod,56,553)//cha mod
     doc.text('0',61,600)//passive per
     doc.fontSize(8);
     doc.text('0',118,187)//Str Saving throws
