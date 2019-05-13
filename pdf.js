@@ -22,6 +22,25 @@ intMod = 0
 conMod = 0
 wisMod = 0
 
+profAthletics = false
+profAcrobatics = false
+profSoH = false
+profStealth = false
+profArcana = false
+profHistory=false
+profInvestigation = false
+profNature = false
+profRelgion = false
+profAnimalHandling=false
+profInsight = false
+profMedicine = false
+profPerception = false
+profSurvival = false
+profDeception = false
+profIntimidation = false
+profPerformance = false
+profPersuasion = false
+
 
 function testFunction(){
     localStorage.testinput = "Yeehaw";
@@ -41,7 +60,25 @@ function chooseClass(){
     localStorage.proficiency = "+2"
     localStorage.hitDice = "1d6"
     localStorage.hitPoints = 6+localStorage.conMod
-
+    
+    if (document.getElementById("arcana").checked == true){
+        localStorage.profArcana = true
+    }
+    if (document.getElementById("history").checked== true){
+        localStorage.profHistory = true
+    }
+    if (document.getElemenById("insight").checked==true){
+        localStorage.profInsight = true
+    }
+    if (document.getElementById("investigation").checked==true){
+        localStorage.profInvestigation = true
+    }
+    if (document.getElementById("medicine").checked==true){
+        localStorage.profMedicine = true
+    }
+    if (document.getElementById("religion").checked==true){
+        localStorage.profReligion = true
+    }
 }
 
 function chooseSubclass(){
@@ -93,7 +130,57 @@ function buyPoints(){
     else{
         localStorage.chaIn = String(localStorage.chaMod)
     }
- 
+    
+    localStorage.strSave = localStorage.strMod
+    localStorage.athleticsMod = localStorage.strMod
+    
+    localStorage.dexSave = localStorage.strMod
+    localStorage.acrobaticsMod = localStorage.dexMod
+    localStorage.SoHMod = localStorage.dexMod
+    localStorage.stealthMod = localStorage.dexMod
+    
+    localStorage.conSave = localStorage.conMod
+    
+    localStorage.intSave = localStorage.intMod
+    localStorage.arcanaMod = localStorage.intMod
+    localStorage.historyMod = localStorage.intMod
+    localStorage.investigationMod = localStorage.intMod
+    localStorage.natureMod = localStorage.intMod
+    localStorage.religionMod = localStorage.intMod
+    
+    localStorage.wisSave = localStorage.wisMod
+    localStorage.animalHandlingMod = localStorage.wisMod
+    localStorage.insightMod = localStorage.wisMod
+    localStorage.medicineMod = localStorage.wisMod
+    localStorage.perceptionMod = localStorage.wisMod
+    localStorage.survivalMod = localStorage.wisMod
+    
+    localStorage.chaSave = localStorage.chaMod
+    localStorage.deceptionMod = localStorage.chaMod
+    localStorage.intimidationMod = localStorage.chaMod
+    localStorage.performanceMod = localStorage.chaMod
+    localStorage.persuasionMod = localStorage.chaMod
+    
+    if (localStorage.profArcana == true){
+        localStorage.arcanaMod += localStorage.proficiency
+    }
+    if (localStorage.profHistory== true){
+        localStorage.historyMod += localStorage.proficiency
+    }
+    if (localStorage.profInsight==true){
+        localStorage.insightMod += localStorage.proficiency
+    }
+    if (localStorage.profInvestigation==true){
+        localStorage.investigationMod += localStorage.proficiency
+    }
+    if (localStorage.profMedicine==true){
+        localStorage.medicineMod += localStorage.proficiency
+    }
+    if (localStorage.profReligion==true){
+        localStorage.religionMod += localStorage.proficiency
+    }
+    
+    localStorage.passivePer = 10 + localStorage.wisMod
     
 }
 
@@ -125,32 +212,32 @@ function fillBoxes(){
     doc.text(localStorage.intIn,56,417)//int mod
     doc.text(localStorage.wisIn,56,485)//wis mod 
     doc.text(localStorage.chaIn,56,553)//cha mod
-    doc.text('0',61,600)//passive per
+    doc.text(localStorage.passivePer,61,600)//passive per
     doc.fontSize(8);
-    doc.text('0',118,187)//Str Saving throws
-    doc.text('0',118,197)//Athletics
-    doc.text('0',118,256)//Dex Saving throws
-    doc.text('0',118,266)//Acrobatics
-    doc.text('0',118,276)//Sleight of Hand
-    doc.text('0',118,286)//Stealth
-    doc.text('0',118,325)//Con Saving throws
-    doc.text('0',118,394)//Int Saving throws
-    doc.text('0',118,403)//Arcana
-    doc.text('0',118,413)//History
-    doc.text('0',118,423)//Investigation
-    doc.text('0',118,433)//Nature
-    doc.text('0',118,443)//Religion
-    doc.text('0',118,463)//Wis Saving throws
-    doc.text('0',118,472)//Animal Handling
-    doc.text('0',118,481)//Insight
-    doc.text('0',118,491)//Medicine
-    doc.text('0',118,501)//Perception
-    doc.text('0',118,511)//Survival
-    doc.text('0',118,531)//Char Saving throws
-    doc.text('0',118,541)//Deception
-    doc.text('0',118,550)//Intimidation
-    doc.text('0',118,560)//Performance
-    doc.text('0',118,570)//Persuasion
+    doc.text(localStorage.strSave,118,187)//Str Saving throws
+    doc.text(localStorage.athleticsMod,118,197)//Athletics
+    doc.text(localStorage.dexSave,118,256)//Dex Saving throws
+    doc.text(localStorage.acrobaticsMod,118,266)//Acrobatics
+    doc.text(localStorage.SoHMod,118,276)//Sleight of Hand
+    doc.text(localStorage.stealthMod,118,286)//Stealth
+    doc.text(localStorage.conSave,118,325)//Con Saving throws
+    doc.text(localStorage.intSave,118,394)//Int Saving throws
+    doc.text(localStorage.arcanaMod,118,403)//Arcana
+    doc.text(localStorage.historyMod,118,413)//History
+    doc.text(localStorage.investigationMod,118,423)//Investigation
+    doc.text(localStorage.natureMod,118,433)//Nature
+    doc.text(localStorage.religionMod,118,443)//Religion
+    doc.text(localStorage.wisSave,118,463)//Wis Saving throws
+    doc.text(localStorage.animalHandlingMod,118,472)//Animal Handling
+    doc.text(localStorage.insightMod,118,481)//Insight
+    doc.text(localStorage.medicineMod,118,491)//Medicine
+    doc.text(localStorage.perceptionMod,118,501)//Perception
+    doc.text(localStorage.survivalMod,118,511)//Survival
+    doc.text(localStorage.chaSave,118,531)//Char Saving throws
+    doc.text(localStorage.deceptionMod,118,541)//Deception
+    doc.text(localStorage.intimidationMod,118,550)//Intimidation
+    doc.text(localStorage.performanceMod,118,560)//Performance
+    doc.text(localStorage.persuasionMod,118,570)//Persuasion
     doc.fontSize(18);
     doc.text('0',238,140)//Armor Class
     doc.text('0',468,142)//Initiative
