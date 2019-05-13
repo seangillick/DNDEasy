@@ -67,7 +67,7 @@ function chooseClass(){
     if (document.getElementById("history").checked== true){
         localStorage.profHistory = true
     }
-    if (document.getElemenById("insight").checked==true){
+    if (document.getElementById("insight").checked==true){
         localStorage.profInsight = true
     }
     if (document.getElementById("investigation").checked==true){
