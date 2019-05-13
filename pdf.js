@@ -55,6 +55,44 @@ function buyPoints(){
     localStorage.intMod = Math.floor((localStorage.iqTotal-10)/2)
     localStorage.wisMod = Math.floor((localStorage.wisTotal-10)/2)
     localStorage.chaMod = Math.floor((localStorage.chaTotal-10)/2)
+    
+    if (localStorage.strMod > -1){
+        localStorage.strIn = "+" + String(localStorage.strMod)
+    }
+    else{
+        localStorage.strIn = String(localStorage.strMod)
+    }
+    
+    if (localStorage.dexMod > -1){
+        localStroage.dexIn = "+" + String(localStorage.dexMod)
+    }
+    else{
+        localStorage.dexIn = String(localStorage.dexMod)
+    }
+    if(localStorage.conMod > -1){
+        localStorage.conIn = "+" + String(localStorage.conMod)
+    }
+    else{
+        localStorage.conIn = String(localStorage.conMod)
+    }
+    if (localStorage.intMod > -1){
+        localStorage.intIn = "+" + String(localStorage.intMod)
+    }
+    else{
+        localStorage.intIn = String(localStorage.intMod)
+    }
+    if(localStorage.wisMod > -1){
+        localStorage.wisIn = "+" + String(localStorage.wisMod)
+    }
+    else{
+        localStorage.wisIn = String(localStorage.wisMod)
+    }
+    if (localStorage.chaMod > -1){
+        localStorage.chaIn = "+" + String(localStorage.chaMod)
+    }
+    else{
+        localStorage.chaIn = String(localStorage.chaMod)
+    }
  
     
 }
@@ -81,12 +119,12 @@ function fillBoxes(){
     doc.text(localStorage.wisTotal,58,465)//char wis
     doc.text(localStorage.chaTotal,58,534)//char cha
     doc.fontSize(14);
-    doc.text("+" + String(localStorage.strMod),56,212)//Str mod
-    doc.text("+" + String(localStorage.dexMod),56,280)//Dex Mod
-    doc.text("+" + String(localStorage.conMod),56,349)//Con mod
-    doc.text("+" + String(localStorage.intMod),56,417)//int mod
-    doc.text("+" + String(localStorage.wisMod),56,485)//wis mod 
-    doc.text("+" + String(localStorage.chaMod),56,553)//cha mod
+    doc.text(localStorage.strIn,56,212)//Str mod
+    doc.text(localStorage.dexIn,56,280)//Dex Mod
+    doc.text(localStorage.conIn,56,349)//Con mod
+    doc.text(localStorage.intIn,56,417)//int mod
+    doc.text(localStorage.wisIn,56,485)//wis mod 
+    doc.text(localStorage.chaIn,56,553)//cha mod
     doc.text('0',61,600)//passive per
     doc.fontSize(8);
     doc.text('0',118,187)//Str Saving throws
