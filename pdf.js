@@ -57,7 +57,7 @@ function chooseRaceDragonborn(){
 function chooseClass(){
     localStorage.cClass = "Wizard"
     localStorage.spells = true
-    localStorage.proficiency = "+2"
+    localStorage.proficiency = 2
     localStorage.hitDice = "1d6"
     localStorage.hitPoints = 6+localStorage.conMod
     
@@ -180,7 +180,7 @@ function buyPoints(){
         localStorage.religionMod += localStorage.proficiency
     }
     
-    localStorage.passivePer = 10 + localStorage.wisMod
+    localStorage.passivePer = 10 + int(localStorage.wisMod)
     
 }
 
