@@ -22,24 +22,6 @@ intMod = 0
 conMod = 0
 wisMod = 0
 
-profAthletics = false
-profAcrobatics = false
-profSoH = false
-profStealth = false
-profArcana = false
-profHistory=false
-profInvestigation = false
-profNature = false
-profRelgion = false
-profAnimalHandling=false
-profInsight = false
-profMedicine = false
-profPerception = false
-profSurvival = false
-profDeception = false
-profIntimidation = false
-profPerformance = false
-profPersuasion = false
 
 
 function testFunction(){
@@ -60,6 +42,26 @@ function chooseClass(){
     localStorage.proficiency = 2
     localStorage.hitDice = "1d6"
     localStorage.hitPoints = 6+localStorage.conMod
+    
+    localStorage.profAthletics = false
+    localStorage.profAcrobatics = false
+    localStorage.profSoH = false
+    localStorage.profStealth = false
+    localStorage.profArcana = false
+    localStorage.profHistory=false
+    localStorage.profInvestigation = false
+    localStorage.profNature = false
+    localStorage.profRelgion = false
+    localStorage.profAnimalHandling=false
+    localStorage.profInsight = false
+    localStorage.profMedicine = false
+    localStorage.profPerception = false
+    localStorage.profSurvival = false
+    localStorage.profDeception = false
+    localStorage.profIntimidation = false
+    localStorage.profPerformance = false
+    localStorage.profPersuasion = false
+
     
     if (document.getElementById("arcana").checked){
         localStorage.profArcana = true
@@ -162,22 +164,22 @@ function buyPoints(){
     localStorage.persuasionMod = localStorage.chaMod
     
     if (localStorage.profArcana){
-        localStorage.arcanaMod = localStorage.arcanaMod + localStorage.proficiency
+        localStorage.arcanaMod = parseInt(localStorage.arcanaMod) + parseInt(localStorage.proficiency)
     }
     if (localStorage.profHistory){
-        localStorage.historyMod = localStorage.historyMod + localStorage.proficiency
+        localStorage.historyMod = parseInt(localStorage.historyMod) + parseInt(localStorage.proficiency)
     }
     if (localStorage.profInsight){
-        localStorage.insightMod = localStorage.insightMod + localStorage.proficiency
+        localStorage.insightMod = parseInt(localStorage.insightMod) + parseInt(localStorage.proficiency)
     }
     if (localStorage.profInvestigation){
-        localStorage.investigationMod = localStorage.investigationMod + localStorage.proficiency
+        localStorage.investigationMod = parseInt(localStorage.investigationMod) + parseInt(localStorage.proficiency)
     }
     if (localStorage.profMedicine){
-        localStorage.medicineMod = localStorage.medicineMod + localStorage.proficiency
+        localStorage.medicineMod = parseInt(localStorage.medicineMod) + parseInt(localStorage.proficiency)
     }
     if (localStorage.profReligion){
-        localStorage.religionMod = localStorage.religionMod + localStorage.proficiency
+        localStorage.religionMod = parseInt(localStorage.religionMod) + parseInt(localStorage.proficiency)
     }
     
     localStorage.passivePer = 10 + parseInt(localStorage.wisMod)
