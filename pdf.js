@@ -51,27 +51,27 @@ function chooseSubclass(){
 function buyPoints(){
     if localStorage.strTotal > 10
     {
-        localStorage.strMod = (localStorage.strTotal%10)//2
+        localStorage.strMod = Math.floor((localStorage.strTotal%10)/2)
     }
     if localStorage.dex > 10
     {
-        localStorage.dexMod = (localStorage.dexTotal%10)//2
+        localStorage.dexMod = Math.floor((localStorage.dexTotal%10)/2)
     }
     if localStorage.conTotal > 10
     {
-        localStorage.conMod = (localStorage.conTotal%10)//2
+        localStorage.conMod = Math.floor((localStorage.conTotal%10)/2)
     }
     if localStorage.iqTotal > 10
     {
-        localStorage.intMod = (localStorage.iqTotal%10)//2
+        localStorage.intMod = Math.floor((localStorage.iqTotal%10)/2)
     }
     if localStorage.wisTotal > 10
     {
-        localStorage.wisMod = (localStorage.wisTotal%10)//2
+        localStorage.wisMod = Math.floor((localStorage.wisTotal%10)/2)
     }
     if localStorage.chaTotal > 10
     {
-        localStorage.chaMod = (localStorage.chaTotal%10)//2
+        localStorage.chaMod = Math.floor((localStorage.chaTotal%10)/2)
     }
     
 }
