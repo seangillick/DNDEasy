@@ -101,7 +101,7 @@ function buyPoints(){
     }
     
     if (localStorage.dexMod > -1){
-        localStroage.dexIn = "+" + String(localStorage.dexMod)
+        localStorage.dexIn = "+" + String(localStorage.dexMod)
     }
     else{
         localStorage.dexIn = String(localStorage.dexMod)
