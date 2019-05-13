@@ -180,7 +180,7 @@ function buyPoints(){
         localStorage.religionMod += localStorage.proficiency
     }
     
-    localStorage.passivePer = 10 + int(localStorage.wisMod)
+    localStorage.passivePer = 10 + parseInt(localStorage.wisMod)
     
 }
 
