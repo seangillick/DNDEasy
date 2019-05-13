@@ -52,7 +52,7 @@ function buyPoints(){
     if (localStorage.strTotal > 10){
         localStorage.strMod = Math.floor((localStorage.strTotal%10)/2)
     }
-    if (localStorage.dex > 10)
+    if (localStorage.dexTotal > 10)
     {
         localStorage.dexMod = Math.floor((localStorage.dexTotal%10)/2)
     }
@@ -97,12 +97,12 @@ function fillBoxes(){
     doc.text(localStorage.wisTotal,58,465)//char wis
     doc.text(localStorage.chaTotal,58,534)//char cha
     doc.fontSize(14);
-    doc.text(localStorage.strMod,56,212)//Str mod
-    doc.text(localStorage.dexMod,56,280)//Dex Mod
-    doc.text(localStorage.conMod,56,349)//Con mod
-    doc.text(localStorage.intMod,56,417)//int mod
-    doc.text(localStorage.wisMod,56,485)//wis mod 
-    doc.text(localStorage.chaMod,56,553)//cha mod
+    doc.text("+" + String(localStorage.strMod),56,212)//Str mod
+    doc.text("+" + String(localStorage.dexMod),56,280)//Dex Mod
+    doc.text("+" + String(localStorage.conMod),56,349)//Con mod
+    doc.text("+" + String(localStorage.intMod),56,417)//int mod
+    doc.text("+" + String(localStorage.wisMod),56,485)//wis mod 
+    doc.text("+" + String(localStorage.chaMod),56,553)//cha mod
     doc.text('0',61,600)//passive per
     doc.fontSize(8);
     doc.text('0',118,187)//Str Saving throws
