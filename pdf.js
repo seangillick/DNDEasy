@@ -63,22 +63,22 @@ function chooseClass(){
     localStorage.profPersuasion = false
 
     
-    if (document.getElementById("arcana").checked){
+    if (document.getElementById("arcana").checked==true){
         localStorage.profArcana = true
     }
-    if (document.getElementById("history").checked){
+    if (document.getElementById("history").checked==true){
         localStorage.profHistory = true
     }
-    if (document.getElementById("insight").checked){
+    if (document.getElementById("insight").checked==true){
         localStorage.profInsight = true
     }
-    if (document.getElementById("investigation").checked){
+    if (document.getElementById("investigation").checked==true){
         localStorage.profInvestigation = true
     }
-    if (document.getElementById("medicine").checked){
+    if (document.getElementById("medicine").checked==true){
         localStorage.profMedicine = true
     }
-    if (document.getElementById("religion").checked){
+    if (document.getElementById("religion").checked==true){
         localStorage.profReligion = true
     }
 }
@@ -136,7 +136,7 @@ function buyPoints(){
     localStorage.strSave = localStorage.strMod
     localStorage.athleticsMod = localStorage.strMod
     
-    localStorage.dexSave = localStorage.strMod
+    localStorage.dexSave = localStorage.dexMod
     localStorage.acrobaticsMod = localStorage.dexMod
     localStorage.SoHMod = localStorage.dexMod
     localStorage.stealthMod = localStorage.dexMod
