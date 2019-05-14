@@ -175,35 +175,41 @@ function buyPoints(){
     localStorage.performanceMod = localStorage.chaMod
     localStorage.persuasionMod = localStorage.chaMod
     
-    if (localStorage.profArcana==true){
+    if (localStorage.profArcana==false){
+        
+    }
+    else{
         localStorage.arcanaMod = parseInt(localStorage.arcanaMod) + parseInt(localStorage.proficiency)
     }
-    else{
+    if (localStorage.profHistory==false){
+        
     }
-    if (localStorage.profHistory==true){
+    else{
         localStorage.historyMod = parseInt(localStorage.historyMod) + parseInt(localStorage.proficiency)
     }
-    else{
+    if (localStorage.profInsight==false){
+        
     }
-    if (localStorage.profInsight==true){
+    else{
         localStorage.insightMod = parseInt(localStorage.insightMod) + parseInt(localStorage.proficiency)
     }
-    else{
+    if (localStorage.profInvestigation==false){
+        
     }
-    if (localStorage.profInvestigation==true){
+    else{
         localStorage.investigationMod = parseInt(localStorage.investigationMod) + parseInt(localStorage.proficiency)
     }
-    else{
-    }
-    if (localStorage.profMedicine==true){
-        localStorage.medicineMod = parseInt(localStorage.medicineMod) + parseInt(localStorage.proficiency)
+    if (localStorage.profMedicine==false){
+       
     }
     else{
+         localStorage.medicineMod = parseInt(localStorage.medicineMod) + parseInt(localStorage.proficiency)
     }
-    if (localStorage.profReligion){
-        localStorage.religionMod = parseInt(localStorage.religionMod) + parseInt(localStorage.proficiency)
+    if (localStorage.profReligion==false){
+       
     }
     else{
+         localStorage.religionMod = parseInt(localStorage.religionMod) + parseInt(localStorage.proficiency)
     }
     
     localStorage.passivePer = 10 + parseInt(localStorage.wisMod)
