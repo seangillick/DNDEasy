@@ -43,43 +43,55 @@ function chooseClass(){
     localStorage.hitDice = "1d6"
     localStorage.hitPoints = 6+localStorage.conMod
     
-    localStorage.profAthletics = false
-    localStorage.profAcrobatics = false
-    localStorage.profSoH = false
-    localStorage.profStealth = false
-    localStorage.profArcana = false
-    localStorage.profHistory=false
-    localStorage.profInvestigation = false
-    localStorage.profNature = false
-    localStorage.profRelgion = false
-    localStorage.profAnimalHandling=false
-    localStorage.profInsight = false
-    localStorage.profMedicine = false
-    localStorage.profPerception = false
-    localStorage.profSurvival = false
-    localStorage.profDeception = false
-    localStorage.profIntimidation = false
-    localStorage.profPerformance = false
-    localStorage.profPersuasion = false
+    localStorage.profAthletics = false;
+    localStorage.profAcrobatics = false;
+    localStorage.profSoH = false;
+    localStorage.profStealth = false;
+    localStorage.profArcana = false;
+    localStorage.profHistory=false;
+    localStorage.profInvestigation = false;
+    localStorage.profNature = false;
+    localStorage.profRelgion = false;
+    localStorage.profAnimalHandling=false;
+    localStorage.profInsight = false;
+    localStorage.profMedicine = false;
+    localStorage.profPerception = false;
+    localStorage.profSurvival = false;
+    localStorage.profDeception = false;
+    localStorage.profIntimidation = false;
+    localStorage.profPerformance = false;
+    localStorage.profPersuasion = false;
 
     
     if (document.getElementById("arcana").checked==true){
-        localStorage.profArcana = true
+        localStorage.profArcana = true;
+    }
+    else{
     }
     if (document.getElementById("history").checked==true){
-        localStorage.profHistory = true
+        localStorage.profHistory = true;
+    }
+    else{
     }
     if (document.getElementById("insight").checked==true){
-        localStorage.profInsight = true
+        localStorage.profInsight = true;
+    }
+    else{
     }
     if (document.getElementById("investigation").checked==true){
-        localStorage.profInvestigation = true
+        localStorage.profInvestigation = true;
+    }
+    else{
     }
     if (document.getElementById("medicine").checked==true){
-        localStorage.profMedicine = true
+        localStorage.profMedicine = true;
+    }
+    else{
     }
     if (document.getElementById("religion").checked==true){
-        localStorage.profReligion = true
+        localStorage.profReligion = true;
+    }
+    else{
     }
 }
 
@@ -163,27 +175,27 @@ function buyPoints(){
     localStorage.performanceMod = localStorage.chaMod
     localStorage.persuasionMod = localStorage.chaMod
     
-    if (localStorage.profArcana){
+    if (localStorage.profArcana==true){
         localStorage.arcanaMod = parseInt(localStorage.arcanaMod) + parseInt(localStorage.proficiency)
     }
     else{
     }
-    if (localStorage.profHistory){
+    if (localStorage.profHistory==true){
         localStorage.historyMod = parseInt(localStorage.historyMod) + parseInt(localStorage.proficiency)
     }
     else{
     }
-    if (localStorage.profInsight){
+    if (localStorage.profInsight==true){
         localStorage.insightMod = parseInt(localStorage.insightMod) + parseInt(localStorage.proficiency)
     }
     else{
     }
-    if (localStorage.profInvestigation){
+    if (localStorage.profInvestigation==true){
         localStorage.investigationMod = parseInt(localStorage.investigationMod) + parseInt(localStorage.proficiency)
     }
     else{
     }
-    if (localStorage.profMedicine){
+    if (localStorage.profMedicine==true){
         localStorage.medicineMod = parseInt(localStorage.medicineMod) + parseInt(localStorage.proficiency)
     }
     else{
