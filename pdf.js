@@ -166,20 +166,32 @@ function buyPoints(){
     if (localStorage.profArcana){
         localStorage.arcanaMod = parseInt(localStorage.arcanaMod) + parseInt(localStorage.proficiency)
     }
+    else{
+    }
     if (localStorage.profHistory){
         localStorage.historyMod = parseInt(localStorage.historyMod) + parseInt(localStorage.proficiency)
+    }
+    else{
     }
     if (localStorage.profInsight){
         localStorage.insightMod = parseInt(localStorage.insightMod) + parseInt(localStorage.proficiency)
     }
+    else{
+    }
     if (localStorage.profInvestigation){
         localStorage.investigationMod = parseInt(localStorage.investigationMod) + parseInt(localStorage.proficiency)
+    }
+    else{
     }
     if (localStorage.profMedicine){
         localStorage.medicineMod = parseInt(localStorage.medicineMod) + parseInt(localStorage.proficiency)
     }
+    else{
+    }
     if (localStorage.profReligion){
         localStorage.religionMod = parseInt(localStorage.religionMod) + parseInt(localStorage.proficiency)
+    }
+    else{
     }
     
     localStorage.passivePer = 10 + parseInt(localStorage.wisMod)
