@@ -51,7 +51,7 @@ function chooseClass(){
     localStorage.profHistory= "false";
     localStorage.profInvestigation = "false";
     localStorage.profNature = "false";
-    localStorage.profRelgion = "false";
+    localStorage.profReligion = "false";
     localStorage.profAnimalHandling="false";
     localStorage.profInsight = "false";
     localStorage.profMedicine = "false";
