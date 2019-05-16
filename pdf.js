@@ -41,7 +41,7 @@ function chooseClass(){
     localStorage.spells = true
     localStorage.proficiency = 2
     localStorage.hitDice = "1d6"
-    localStorage.hitPoints = 6+localStorage.conMod
+    localStorage.spellCasting = "Int"
     
     localStorage.profAthletics = "false";
     localStorage.profAcrobatics = "false";
@@ -198,6 +198,11 @@ function buyPoints(){
     }
     
     localStorage.passivePer = 10 + parseInt(localStorage.wisMod)
+    localStorage.armor = 11 + parseInt(localStorage.dexMod)
+    localStorage.natAC = 11
+    localStorage.spellSave = 8 + parseInt(localStorage.proficiency) + parseInt(localStorage.intMod)
+    localStorage.hitPoints = 6+parseInt(localStorage.conMod)
+    localStorage.spellAttk = parseInt(localStorage.proficiency)+parseInt(localStorage.intMod)
     
 }
 
@@ -256,23 +261,22 @@ function fillBoxes(){
     doc.text(localStorage.performanceMod,118,560)//Performance
     doc.text(localStorage.persuasionMod,118,570)//Persuasion
     doc.fontSize(18);
-    doc.text('0',238,140)//Armor Class
-    doc.text('0',468,142)//Initiative
+    doc.text(localStorage.armor,238,140)//Armor Class
+    doc.text(localStorage.dexMod,468,142)//Initiative
     doc.text(localStorage.speed,530,142,{
         width: 550
     }
     );
     doc.fontSize(12);
-    doc.text('0',295,143)//Dex Mod
-    doc.text('0',337,143)//Armor
+    doc.text(localStorage.dexMod,295,143)//Dex Mod
+    doc.text(localStorage.natAC,337,143)//Armor
     doc.text('0',377,143)//Shield
     doc.text('0',419,143)//Misc
     doc.text(localStorage.hitPoints,330,209)//Max HP
     doc.text(localStorage.hitDice,260,264)//Hit dice tot
-    doc.text('Ski',240,340)//Spell casting
-    doc.text('0',300,340)//SpellSave
-    doc.text('0',360,340)//Spell Attk Bonus
-    doc.text('0',230,)
+    doc.text(localStorage.spellCasting,240,340)//Spell casting
+    doc.text(localStorage.spellSave,300,340)//SpellSave
+    doc.text(localStorage.spellAttk,360,340)//Spell Attk Bonus
 
 
 }
