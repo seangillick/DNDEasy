@@ -18,7 +18,7 @@ function checkboxlimit(checkgroup, limit){
 		if (checkedcount>limit){
 			alert("You can only select a maximum of "+limit+" checkboxes")
 			this.checked=false
-			}
+    }
 		}
 	}
 }
@@ -95,7 +95,7 @@ function checkboxlimit(checkgroup, limit){
           flex-flow: row;
           min-height: 50px;
           width:90%;
-          padding: 2%;
+          padding: 0%;
           
         }
         .main {
@@ -127,6 +127,7 @@ function checkboxlimit(checkgroup, limit){
          margin-left:2%;
         background-color: white;
          width:80%;
+         height:75%;
         }
         
         table, td, th {
@@ -143,7 +144,7 @@ function checkboxlimit(checkgroup, limit){
         }
         
         th {
-          height: 30%;
+          height: 25%;
           
         }
             
@@ -183,12 +184,12 @@ function checkboxlimit(checkgroup, limit){
                 <div class="main">
                   <p>Wizard Skills (choose 2)</p>
                   <form id = "wizard" name = "wizard">
-                  <div class="col traits"><input type="checkbox" name="skills" id="arcana" /> Arcana<br/></div>
-                  <div class="col traits"><input type="checkbox" name="skills" id ="history"/> History<br/></div>
-                  <div class="col traits"><input type="checkbox" name="skills" id="insight"/> Insight<br/></div>
-                  <div class="col traits"><input type="checkbox" name="skills" id="investigation"/> Investigation<br/></div>
-                  <div class="col traits"><input type="checkbox" name="skills" id="medicine"/> Medicine<br/></div>
-                  <div class="col traits"><input type="checkbox" name="skills" id="religion"/> Religion<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> Arcana<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> History<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> Insight<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> Investigation<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> Medicine<br/></div>
+                  <div class="col traits"><input type="checkbox" name="skills" /> Religion<br/></div>
                 </form>
                 </div>
                 <script type="text/javascript">
@@ -307,7 +308,11 @@ function checkboxlimit(checkgroup, limit){
               </table>
         </div>
         <div class = "description">
-          <p>We need to give a breif description of the wizard class here</p>
+          <p>Wizards are magic-users defined and united by their spells. Their spells conjure elements from other planes of existence. 
+            Some wizards aspire to be like gods, shaping reality itself. Wizards live and die by their spells, everything else is secondary to them.
+            They learn new spells as they experiment and grown in experience, but can also learn from other wizards, ancient tomes or inscriptions, 
+            or even ancient creatures.
+          </p>
         </div>
         <button class = "button" onclick="chooseClass(); forward()">Select This Class</button>
         <br>
