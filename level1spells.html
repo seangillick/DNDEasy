@@ -1,0 +1,339 @@
+<!DOCTYPE html> 
+<html> 
+   <body>
+      <a href = "https://seangillick.github.io/DNDEasy/index.html"> 
+      <img src = "https://i.imgur.com/VP0Shv3.png" height="120" width="30" class="logo">
+      </a>
+      <p align = "center">Level 1 Spells</p>
+ <style>
+    body{
+        background-color: rgb(86, 86, 86);
+        background-size: cover;
+      }
+     .logo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    h1{
+       color: white;
+       font-family: "Bowlby One SC"; 
+       font-size: 28px;  
+       font-weight: 400; 
+       line-height: 20px;
+       font-style: normal; 
+       font-variant: normal;
+       
+       }
+      h2{
+       color: white;
+       font-family: "Bowlby One SC"; 
+       font-size: 20px;  
+       font-weight: 400; 
+       line-height: 20px;
+       font-style: normal; 
+       font-variant: normal;
+       margin-left: 200px;
+       
+       }
+       .cText{
+       text-align:center;
+        }
+    .button{
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        margin-left:auto;
+        margin-right: auto;
+        color:black;
+    }
+    
+    p{
+       color: white;
+       font-family: "Bowlby One SC"; 
+       font-size: 20px;  
+       font-weight: 400; 
+       line-height: 20px;
+       font-style: normal; 
+       font-variant: normal;
+       
+    }
+    
+    
+    
+    .container {
+      display: flex;
+      flex-flow: row;
+      min-height: 50px;
+      width:90%;
+      padding: 1%;
+      
+    }
+    .main {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      margin-left:4%;
+      margin-right:4%;
+      text-align: center;
+      font-size:20px;
+      height: 30%;
+      
+    }
+    .col {
+      margin: 2px;
+      border-style: solid;
+      border-color: black;
+    }
+    .names {
+        background: white;
+        margin-left: 2%;
+      }
+    .traits {
+      background-color: white;
+      margin:2%;
+      width:100%
+    }
+    .t {
+     margin-left:2%;
+    background-color: white;
+     width:80%;
+    }
+    
+    table, td, th {
+      border: 1px solid black;
+      text-align:left;
+      font-size: 18px;
+      
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom:0%;
+     
+    }
+    
+    th {
+      height: 30%;
+      
+    }
+        
+    
+    .race{
+      height:300px;
+    
+    }
+    .description{
+    
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      width: 75%;
+      margin-left: auto;
+      margin-right:auto;
+    }
+    </style>
+<div align="center">
+   <table class = "t">
+      <form id = "cantrips" name = "cantrips">
+   <tr>
+    <th>1st Level (Choose 6)</th>
+    <th>Casting Time</th>
+    <th>Range</th>
+    <th>Duration</th>
+    <th>Effect</th>
+   </tr>
+   <tr>
+    <td><input type="checkbox" name="color" />Alarm<br/></div></td>
+    <td>1 minute</td>
+    <td>30 feet</td>
+    <td>8 hours</td>
+    <td>Set an alarm against unwanted intrusion.</td>
+   </tr>
+   <tr>
+      <td><input type="checkbox" name="color" />Burning Hands<br/></div></td>
+      <td>1 action</td>
+      <td>Self (15-foot cone)</td>
+      <td>Instantaneous</td>
+      <td>A thin sheet of flames shoots forth from your outstretched fingertips.</td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Charm Person<br/></div></td>
+      <td>1 action</td>
+      <td>30 feet </td>
+      <td>1 hour</td>
+      <td>Attempt to charm a humanoid you can see within range.</td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Color Spray<br/></div></td>
+      <td>1 action</td>
+      <td>Self (15-foot cone) </td>
+      <td>1 round</td>
+      <td>A dazzling array of flashing, colored light springs from your hand. </td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Comprehend Languages<br/></div></td>
+      <td>1 action</td>
+      <td>Self</td>
+      <td>1 hour</td>
+      <td>For the duration, you understand the literal meaning of any spoken language that you hear. </td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Detect Magic<br/></div></td>
+      <td>1 action</td>
+      <td>Self  </td>
+      <td>Concentration, up to 10 minutes</td>
+      <td>For the duration, you sense the presence of magic within 30 feet of you. </td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Disguise Self<br/></div></td>
+      <td>1 action</td>
+      <td>Self </td>
+      <td>1 hour</td>
+      <td>You make yourself--including your clothing, armor, weapons, and other belongings on your person--look different.</td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Expeditious Retreat<br/></div></td>
+      <td>1 bonus action</td>
+      <td>Self</td>
+      <td>Concentration, up to 10 minutes</td>
+      <td>Allows you to move at an incredible pace. </td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />False Life<br/></div></td>
+      <td>1 action</td>
+      <td>Self </td>
+      <td>1 hour</td>
+      <td>Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration.</td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Feather Fall<br/></div></td>
+      <td>1 action</td>
+      <td>60 feet </td>
+      <td>1 minute</td>
+      <td>Choose up to five falling creatures within range to slow their rate of descent.</td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Find Familiar<br/></div></td>
+      <td>1 hour </td>
+      <td>10 feet </td>
+      <td>Instantaneous</td>
+      <td>You gain the service of a familiar, a spirit that takes an animal form you choose.</td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Floating Disk<br/></div></td>
+      <td>1 action</td>
+      <td>30 feet</td>
+      <td>1 hour</td>
+      <td>Creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range.</td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Fog Cloud<br/></div></td>
+      <td>1 action</td>
+      <td>120 feet</td>
+      <td>Concentration, up to 1 hour</td>
+      <td>Create a 20-foot-radius sphere of fog centered on a point within range.</td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Grease<br/></div></td>
+      <td>1 action</td>
+      <td>60 feet </td>
+      <td>1 minute</td>
+      <td>Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration. </td>
+     </tr>
+     <tr>
+      <td><input type="checkbox" name="color" />Hideous Laughter<br/></div></td>
+      <td>1 action</td>
+      <td>30 feet</td>
+      <td>Concentration, up to 1 minute</td>
+      <td>A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it.</td>
+     </tr>
+     <tr>
+        <td><input type="checkbox" name="color" />Identify<br/></div></td>
+        <td>1 minute</td>
+        <td>Touch </td>
+        <td>Instantaneous</td>
+        <td>Choose one object that you must touch throughout the casting of the spell, and learn how to use them.</td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Illusory Script<br/></div></td>
+        <td>1 minute</td>
+        <td>Touch</td>
+        <td>10 days</td>
+        <td>Write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration. </td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Jump<br/></div></td>
+        <td>1 action</td>
+        <td>Touch</td>
+        <td>1 minute</td>
+        <td>Touch a creature. The creature's jump distance is tripled until the spell ends.</td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Longstrider<br/></div></td>
+        <td>1 action</td>
+        <td>Touch </td>
+        <td>1 hour</td>
+        <td>Touch a creature. The target's speed increases by 10 feet until the spell ends.</td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Mage Armor<br/></div></td>
+        <td>1 action</td>
+        <td>Touch </td>
+        <td>8 hours</td>
+        <td>Touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends.</td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Magic Missile<br/></div></td>
+        <td>1 action </td>
+        <td>120 feet</td>
+        <td>Instantaneous</td>
+        <td>Create three glowing darts of magical force.</td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Protection from Evil and Good<br/></div></td>
+        <td>1 action</td>
+        <td>Touch  </td>
+        <td>Concentration up to 10 minutes</td>
+        <td>Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. </td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Shield<br/></div></td>
+        <td>1 reaction</td>
+        <td>Self </td>
+        <td>1 round</td>
+        <td>An invisible barrier of magical force appears and protects you.</td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Silent Image<br/></div></td>
+        <td>1 action</td>
+        <td>60 feet </td>
+        <td>Concentration, up to 10 minutes</td>
+        <td>Create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube.</td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Sleep <br/></div></td>
+        <td>1 action</td>
+        <td>90 feet </td>
+        <td>1 minute</td>
+        <td>Sends creatures into a magical slumber.</td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Thunderwave<br/></div></td>
+        <td>1 action</td>
+        <td>Self (15-foot cube)</td>
+        <td>Instantaneous</td>
+        <td>A wave of thunderous force sweeps out from you.</td>
+       </tr>
+       <tr>
+        <td><input type="checkbox" name="color" />Unseen Servant<br/></div></td>
+        <td>1 action</td>
+        <td>60 feet </td>
+        <td>1 hour</td>
+        <td>Creates an invisible, mindless, shapeless force that performs simple tasks at your command until the spell ends.</td>
+       </tr>
+   </table>
+   </div>
+</html>
