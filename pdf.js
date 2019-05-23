@@ -236,7 +236,7 @@ function fillBoxes(){
     doc.text(localStorage.intIn,56,417)//int mod
     doc.text(localStorage.wisIn,56,485)//wis mod 
     doc.text(localStorage.chaIn,56,553)//cha mod
-    doc.text(localStorage.passivePer,59,600)//passive per
+    doc.text(localStorage.passivePer,56,600)//passive per
     doc.fontSize(8);
     doc.text(localStorage.strSave,118,187)//Str Saving throws
     doc.text(localStorage.athleticsMod,118,197)//Athletics
@@ -263,7 +263,7 @@ function fillBoxes(){
     doc.text(localStorage.performanceMod,118,560)//Performance
     doc.text(localStorage.persuasionMod,118,570)//Persuasion
     doc.fontSize(18);
-    doc.text(localStorage.armor,235,140)//Armor Class
+    doc.text(localStorage.armor,231,140)//Armor Class
     doc.text(localStorage.dexMod,468,142)//Initiative
     doc.text(localStorage.speed,530,142,{
         width: 550
@@ -278,7 +278,7 @@ function fillBoxes(){
     doc.text(localStorage.hitDice,260,264)//Hit dice tot
     doc.text(localStorage.spellCasting,240,340)//Spell casting
     doc.text(localStorage.spellSave,300,340)//SpellSave
-    doc.text(localStorage.spellAttk,360,340)//Spell Attk Bonus
+    doc.text(localStorage.spellAttkIn,360,340)//Spell Attk Bonus
 
 
 }
