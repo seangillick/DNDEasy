@@ -40,6 +40,7 @@ function chooseClass(){
     localStorage.cClass = "Wizard"
     localStorage.spells = true
     localStorage.proficiency = 2
+    localStorage.proficiencyIn = "+" + String(localStorage.proficiency)
     localStorage.hitDice = "1d6"
     localStorage.spellCasting = "Int"
     
@@ -203,6 +204,7 @@ function buyPoints(){
     localStorage.spellSave = 8 + parseInt(localStorage.proficiency) + parseInt(localStorage.intMod)
     localStorage.hitPoints = 6+parseInt(localStorage.conMod)
     localStorage.spellAttk = parseInt(localStorage.proficiency)+parseInt(localStorage.intMod)
+    localStorage.spellAttkIn = "+" + String(localStorage.spellAttk)
     
 }
 
@@ -220,7 +222,7 @@ function fillBoxes(){
     doc.text(localStorage.race,273,79)//char race
     doc.text('Alignment',379,79)//char alignment
     doc.text('EXP',485,79)//char exp
-    doc.text(localStorage.proficiency,55,130)//char prof
+    doc.text(localStorage.proficiencyIn,55,130)//char prof
     doc.text(localStorage.strTotal,58,189)//char str
     doc.text(localStorage.dexTotal,58,258)//char dex
     doc.text(localStorage.conTotal,58,327)//char con
@@ -234,7 +236,7 @@ function fillBoxes(){
     doc.text(localStorage.intIn,56,417)//int mod
     doc.text(localStorage.wisIn,56,485)//wis mod 
     doc.text(localStorage.chaIn,56,553)//cha mod
-    doc.text(localStorage.passivePer,61,600)//passive per
+    doc.text(localStorage.passivePer,59,600)//passive per
     doc.fontSize(8);
     doc.text(localStorage.strSave,118,187)//Str Saving throws
     doc.text(localStorage.athleticsMod,118,197)//Athletics
