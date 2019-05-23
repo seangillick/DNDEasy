@@ -1,13 +1,221 @@
+
+
+
 <html>
-<style>
+        <head>
+          <script src="https://github.com/foliojs/pdfkit/releases/download/v0.8.0/pdfkit.js"></script>
+          <script src="https://github.com/devongovett/blob-stream/releases/download/v0.1.3/blob-stream.js"></script>
+          <script src="pdf.js"></script>
+        <script>
+function checkboxlimit(checkgroup, limit){
+	var checkgroup=checkgroup
+	var limit=limit
+	for (var i=0; i<checkgroup.length; i++){
+		checkgroup[i].onclick=function(){
+		var checkedcount=0
+		for (var i=0; i<checkgroup.length; i++)
+			checkedcount+=(checkgroup[i].checked)? 1 : 0
+		if (checkedcount>limit){
+			alert("You can only select a maximum of "+limit+" checkbox")
+			this.checked=false
+    }
+		}
+	}
+}
+
+        function goBack() {
+          window.history.back()
+        }
+        
+        function forward(){
+                window.location='https://seangillick.github.io/DNDEasy/subclass.html';
+        }
+        </script>
+        </head>
+        <style>
+        body{
+            background-color: rgb(86, 86, 86);
+            background-size: cover;
+          }
+         .logo {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+        h1{
+           color: white;
+           font-family: "Bowlby One SC"; 
+           font-size: 28px;  
+           font-weight: 400; 
+           line-height: 20px;
+           font-style: normal; 
+           font-variant: normal;
+           
+           }
+          h2{
+           color: white;
+           font-family: "Bowlby One SC"; 
+           font-size: 20px;  
+           font-weight: 400; 
+           line-height: 20px;
+           font-style: normal; 
+           font-variant: normal;
+           margin-left: 200px;
+           
+           }
+           .cText{
+           text-align:center;
+            }
+        .button{
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            margin-left:auto;
+            margin-right: auto;
+            color:black;
+        }
+        
+        p{
+           color: white;
+           font-family: "Bowlby One SC"; 
+           font-size: 20px;  
+           font-weight: 400; 
+           line-height: 20px;
+           font-style: normal; 
+           font-variant: normal;
+           
+        }
+        
+        .input {
+            height: 20%;
+            width: 30%;
+          }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .flex-container > div {
+            width: 25%;
+            margin: 12%;
+            margin-top: 0%;
+            margin-bottom: 2%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+        }
+
+        table, td, th {
+          border: 2px solid black;
+          text-align:center;
+          font-size: 18px;
+          color: black;
+          background-color: white;
+          padding: 5px;
+
+      
+        }
+    
+      table {
+        border-collapse: collapse;
+        width: 95%;
+        margin-bottom:0%;
+        margin-top: 0%;
+        margin-left: auto;
+        margin-right:auto;
+     
+      }
+    
+      th {
+        height: 100%;
+      
+      }
+        </style>
+        <body>
+        <a href = "https://seangillick.github.io/DNDEasy/index.html"> 
+            <img src = "https://i.imgur.com/VP0Shv3.png" height="120" width="30" class="logo"/>
+        </a>
+        
+        <div class="flex-container">
+            <div>
+              <p>Your Name:</p>
+              <input type="text" id="userName" placeholder="Ex: Paul"><br>
+            </div>
+            <div>
+              <p>Character's Name:</p>
+              <input type="text" id="charName" placeholder="Ex: Balasar"><br>
+            </div> 
+          </div>
+
+          <table>
+              <form id = "final" name = "final">
+          <tr>
+            <th>Alignment (choose 1)</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="alignment" />Lawful Good<br/></div></td>
+            <td>A lawful good character acts as a good person is expected or required to act. They combine a commitment to oppose evil 
+              with the discipline to fight relentlessly. They tell the truth, keeps their word, help those in need, and speak out against injustice.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="alignment" />Neutral Good<br/></div></td>
+            <td>A neutral good character does the best that a good person can do. They are devoted to helping others. They works with kings and 
+              magistrates but does not feel obligated to.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="alignment" />Chaotic Good<br/></div></td>
+            <td>A chaotic good character acts as their conscience directs them with little regard for what others expect of them. They believe
+               in goodness and right but have little use for laws and regulations. They follow their own moral compass, which, although good, 
+               may not agree with that of society.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="alignment" />Lawful Neutral<br/></div></td>
+            <td>A lawful neutral character acts as law, tradition, or a personal code directs them. They may believe in personal order and live
+               by a code or standard, or they may believe in order for all and favor a strong, organized government.</td>
+          </tr>
+          <tr>
+            <tr>
+            <td><input type="checkbox" name="alignment" />Neutral<br/></div></td>
+            <td>A neutral character does what seems to be a good idea. They don't feel strongly one way or the other when it comes to good vs. evil or law vs. chaos
+              . Most neutral characters exhibit a lack of conviction or bias rather than a commitment to neutrality.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="alignment" />Chaotic Neutral<br/></div></td>
+            <td>A chaotic neutral character follows their whims. They are individualists first and last. They values their own liberty 
+              but don't strive to protect others' freedom. They avoids authority, resents restrictions, and challenges traditions.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="alignment" />Lawful Evil<br/></div></td>
+            <td>A lawful evil villain methodically takes what they want within the limits of their code of conduct without regard for whom it hurts.
+               They cares about tradition, loyalty, and order but not about freedom, dignity, or life. They play by the rules but without mercy or compassion. </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="alignment" />Neutral Evil<br/></div></td>
+            <td>A neutral evil villain does whatever they can get away with. They shed no tears for those they kills, whether for profit, sport, or convenience. 
+              They has no love for order and hold no illusion that following laws, traditions, or codes would make them any better or more noble.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="alignment" />Chaotic Evil<br/></div></td>
+            <td>A chaotic evil character does whatever their greed, hatred, and lust for destruction drive them to do. They are hot-tempered, vicious, arbitrarily violent, 
+              and unpredictable. If they are simply out for whatever they can get, they are ruthless and brutal. If they are committed to the spread of evil and chaos, they
+               are even worse. </td>
+          </tr>
+        </table>
+      </form>
+      <script type="text/javascript">
+        checkboxlimit(document.forms.final.alignment, 1)
+    </script>
 
 
-</style>
 
-<body>
+        <br>
+        <button class = "button" onclick="chooseClass(); forward()">Select this Alignment</button>
 
-
-
-
-</body>
-</html>
+        <button class = "button" onclick="goBack()">Go Back</button>
+        
+        </body>
+        </html>
+        
