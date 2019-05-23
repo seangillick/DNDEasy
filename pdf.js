@@ -263,7 +263,7 @@ function fillBoxes(){
     doc.text(localStorage.performanceMod,118,560)//Performance
     doc.text(localStorage.persuasionMod,118,570)//Persuasion
     doc.fontSize(18);
-    doc.text(localStorage.armor,238,140)//Armor Class
+    doc.text(localStorage.armor,235,140)//Armor Class
     doc.text(localStorage.dexMod,468,142)//Initiative
     doc.text(localStorage.speed,530,142,{
         width: 550
@@ -271,7 +271,7 @@ function fillBoxes(){
     );
     doc.fontSize(12);
     doc.text(localStorage.dexMod,295,143)//Dex Mod
-    doc.text(localStorage.natAC,337,143)//Armor
+    doc.text(localStorage.natAC,334,143)//Armor
     doc.text('0',377,143)//Shield
     doc.text('0',419,143)//Misc
     doc.text(localStorage.hitPoints,330,209)//Max HP
