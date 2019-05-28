@@ -33,16 +33,52 @@ function chooseRaceDragonborn(){
     localStorage.racialBonStr = 2
     localStorage.racialBonChar = 1
     localStorage.speed =  "30ft."
+    if (document.getElementById("black").checked==true){
+        breathWeapon = "Breath Weapon, Acid, 5 by 30ft line (Dex. save)"
+    }
+    if (document.getElementById("blue").checked==true){
+        breathWeapon = "Breath Weapon, Lightning, 5 by 30ft line (Dex. save)"
+    }
+    if (document.getElementById("brass").checked==true){
+        breathWeapon = "Breath Weapon, Fire, 5 by 30ft line (Dex. save)"
+    }
+    if (document.getElementById("bronze").checked==true){
+        breathWeapon = "Breath Weapon, Lightning 5 by 30ft line (Dex. save)"
+    }
+    if (document.getElementById("copper").checked==true){
+        breathWeapon = "Breath Weapon, Acid, 5 by 30 ft. line (Dex. save)"
+    }
+    if (document.getElementById("gold").checked==true){
+        breathWeapon = "Breath Weapon, Fire, 15ft. cone (Dex. save)"
+    }
+    if (document.getElementById("green").checked==true){
+        breathWeapon = "Breath Weapon, Poison, 15ft. cone (Con. save)"
+    }
+    if (document.getElementById("red").checked==true){
+        breathWeapon = "Breath Weapon, Fire, 15ft. cone (Dex. save)"
+    }
+    if (document.getElementById("silver").checked==true){
+        breathWeapon = "Breath Weapon, Cold, 15ft. cone (Con. save)"    
+    }
+    if (document.getElementById("white").checked==true){
+        breathWeapon = "Breath Weapon, Cold, 15ft. cone (Con. save)"
+    }
     
+    
+    
+    localStorage.features = localStorage.features + "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.\n" + breathWeapon
+    localStorage.features = localStorage.features + "\nDamage Resistance: You have resistance to the damage type associated with your draconic ancestry."
 }
 
 function chooseClass(){
+    localStorage.features = ""
     localStorage.cClass = "Wizard"
     localStorage.spells = true
     localStorage.proficiency = 2
     localStorage.proficiencyIn = "+" + String(localStorage.proficiency)
     localStorage.hitDice = "1d6"
     localStorage.spellCasting = "Int"
+    localStorage.features = localStorage.features + "Arcane Recovery: You have learned to regain some of your magical energy by studying your Spellbook. Once per day when you finish a Short Rest, you can choose expended Spell Slots to recover. The Spell Slots can have a combined level that is equal to or less than half your Wizard level (rounded up), and none of the slots can be 6th level or higher.\n"
     
     localStorage.profAthletics = "false";
     localStorage.profAcrobatics = "false";
@@ -279,6 +315,11 @@ function fillBoxes(){
     doc.text(localStorage.spellCasting,240,340)//Spell casting
     doc.text(localStorage.spellSave,300,340)//SpellSave
     doc.text(localStorage.spellAttkIn,360,340)//Spell Attk Bonus
+    doc.fontSize(11)
+    doc.text(localStorage.features,413,400,{
+        width: 175,
+        align:'left'
+    });
 
 
 }
