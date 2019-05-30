@@ -28,6 +28,7 @@ function testFunction(){
     localStorage.testinput = "Yeehaw";
 }
 
+//Adds race attributes to sheet
 function chooseRaceDragonborn(){
     localStorage.race = "Dragonborn";
     localStorage.racialBonStr = 2
@@ -65,12 +66,11 @@ function chooseRaceDragonborn(){
     }
     
     
-    
-    //localStorage.features = localStorage.features + "\nYou can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.\n" + breathWeapon
     localStorage.features+=breathWeapon
     localStorage.features = localStorage.features + "\nDamage Resistance: You have resistance to the damage type associated with your draconic ancestry."
 }
 
+//Fills in Wizards class attributes
 function chooseClass(){
     localStorage.features = ""
     localStorage.cClass = "Wizard"
@@ -133,11 +133,13 @@ function chooseClass(){
     }
 }
 
+//Fills in Abjuration subclass attributes
 function chooseSubclass(){
     localStorage.cClass += ", School of Abjuration"
     localStorage.features+= "\nLevel 2: Gold and time spent copying spells reduced by half. Cast magic for self protection. Create a magical ward that absorbs and deals damage\nLevel 6: When a creature within 10 meters of you takes damage, you ward can absorb the damage instead.\nLevel 10: When casting abjuration spells that require an ability check add proficiency.\nLevel 14: Advantage on Saving Throws against spells. Res to damage from spells.\n"
 }
 
+//Adds cantrips to spell page
 function chooseCantrips(){
     localStorage.cantrips=""
     if (document.getElementById("acid").checked==true){
@@ -185,6 +187,8 @@ function chooseCantrips(){
     
 }
 
+
+//Adds spells to second page
 function chooseSpells(){
     localStorage.spells=""
     if (document.getElementById("alarm").checked==true){
@@ -272,6 +276,7 @@ function chooseSpells(){
     
 }
 
+//Calculates point bonuses for character
 function buyPoints(){
     localStorage.strMod = Math.floor((localStorage.strTotal-10)/2)
     localStorage.dexMod = Math.floor((localStorage.dexTotal-10)/2)
@@ -393,7 +398,7 @@ function fillBoxes(){
     doc.text(localStorage.pName,485,52)//player name
     doc.text(localStorage.race,273,79)//char race
     doc.text(localStorage.alignment,379,79)//char alignment
-    doc.text('EXP',485,79)//char exp
+    doc.text('0',485,79)//char exp
     doc.text(localStorage.proficiencyIn,55,130)//char prof
     doc.text(localStorage.strTotal,58,189)//char str
     doc.text(localStorage.dexTotal,58,258)//char dex
@@ -452,10 +457,12 @@ function fillBoxes(){
     doc.text(localStorage.spellSave,300,340)//SpellSave
     doc.text(localStorage.spellAttkIn,360,340)//Spell Attk Bonus
     doc.fontSize(8)
+    //Features
     doc.text(localStorage.features,413,400,{
         width: 175,
         align:'left'
     });
+    //Gear
     doc.text(localStorage.gear,35,631,{
         width:170
     })
@@ -465,7 +472,8 @@ function fillBoxes(){
 }
 
 
-
+//Adds final objects, calls FillBoxes, adds names, adds second page and adds cantrips/spells
+//Outputs as downloadable blob for PDF
 function finishSheet(){
     localStorage.alignment=""
     localStorage.pName = document.getElementById("userName").value
@@ -529,8 +537,3 @@ function finishSheet(){
 }
 
 
-// app.get("/download",function(req,res){
-//     res.download("new2.pdf")
-// })
-
-// app.listen(8888)
