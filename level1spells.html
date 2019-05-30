@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <script src="https://github.com/foliojs/pdfkit/releases/download/v0.8.0/pdfkit.js"></script>
+    <script src="https://github.com/devongovett/blob-stream/releases/download/v0.1.3/blob-stream.js"></script>
+    <script src="pdf.js"></script>
 
 <body>
   <a href="https://seangillick.github.io/DNDEasy/index.html">
@@ -184,7 +187,7 @@
           <th>Effect</th>
         </tr>
         <tr>
-          <td><input type="checkbox" name="skill" />Alarm<br />
+          <td><input type="checkbox" name="skill" id="alarm" />Alarm<br />
   </div>
   </td>
   <td>1 minute</td>
@@ -193,7 +196,7 @@
   <td>Set an alarm against unwanted intrusion.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Burning Hands<br /></div>
+    <td><input type="checkbox" name="skill" id="burning" />Burning Hands<br /></div>
     </td>
     <td>1 action</td>
     <td>Self (15-foot cone)</td>
@@ -201,7 +204,7 @@
     <td>A thin sheet of flames shoots forth from your outstretched fingertips.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Charm Person<br /></div>
+    <td><input type="checkbox" name="skill" id="charm" />Charm Person<br /></div>
     </td>
     <td>1 action</td>
     <td>30 feet </td>
@@ -209,7 +212,7 @@
     <td>Attempt to charm a humanoid you can see within range.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Color Spray<br /></div>
+    <td><input type="checkbox" name="skill" id="color"/>Color Spray<br /></div>
     </td>
     <td>1 action</td>
     <td>Self (15-foot cone) </td>
@@ -217,7 +220,7 @@
     <td>A dazzling array of flashing, colored light springs from your hand. </td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Comprehend Languages<br /></div>
+    <td><input type="checkbox" name="skill" id="comprehend" />Comprehend Languages<br /></div>
     </td>
     <td>1 action</td>
     <td>Self</td>
@@ -225,7 +228,7 @@
     <td>For the duration, you understand the literal meaning of any spoken language that you hear. </td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Detect Magic<br /></div>
+    <td><input type="checkbox" name="skill" id="detect" />Detect Magic<br /></div>
     </td>
     <td>1 action</td>
     <td>Self </td>
@@ -233,7 +236,7 @@
     <td>For the duration, you sense the presence of magic within 30 feet of you. </td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Disguise Self<br /></div>
+    <td><input type="checkbox" name="skill" id="disguise" />Disguise Self<br /></div>
     </td>
     <td>1 action</td>
     <td>Self </td>
@@ -242,7 +245,7 @@
     </td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Expeditious Retreat<br /></div>
+    <td><input type="checkbox" name="skill" id="expeditious" />Expeditious Retreat<br /></div>
     </td>
     <td>1 bonus action</td>
     <td>Self</td>
@@ -250,7 +253,7 @@
     <td>Allows you to move at an incredible pace. </td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />False Life<br /></div>
+    <td><input type="checkbox" name="skill" id="false" />False Life<br /></div>
     </td>
     <td>1 action</td>
     <td>Self </td>
@@ -259,7 +262,7 @@
       duration.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Feather Fall<br /></div>
+    <td><input type="checkbox" name="skill" id="feather" />Feather Fall<br /></div>
     </td>
     <td>1 action</td>
     <td>60 feet </td>
@@ -267,7 +270,7 @@
     <td>Choose up to five falling creatures within range to slow their rate of descent.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Find Familiar<br /></div>
+    <td><input type="checkbox" name="skill" id="findF" />Find Familiar<br /></div>
     </td>
     <td>1 hour </td>
     <td>10 feet </td>
@@ -275,7 +278,7 @@
     <td>You gain the service of a familiar, a spirit that takes an animal form you choose.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Floating Disk<br /></div>
+    <td><input type="checkbox" name="skill" id="floating" />Floating Disk<br /></div>
     </td>
     <td>1 action</td>
     <td>30 feet</td>
@@ -284,7 +287,7 @@
       ground in an unoccupied space of your choice that you can see within range.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Fog Cloud<br /></div>
+    <td><input type="checkbox" name="skill" id="fog"/>Fog Cloud<br /></div>
     </td>
     <td>1 action</td>
     <td>120 feet</td>
@@ -292,7 +295,7 @@
     <td>Create a 20-foot-radius sphere of fog centered on a point within range.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Grease<br /></div>
+    <td><input type="checkbox" name="skill" id="grease" />Grease<br /></div>
     </td>
     <td>1 action</td>
     <td>60 feet </td>
@@ -301,7 +304,7 @@
       terrain for the duration. </td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Hideous Laughter<br /></div>
+    <td><input type="checkbox" name="skill" id="hideous"/>Tasha's Hideous Laughter<br /></div>
     </td>
     <td>1 action</td>
     <td>30 feet</td>
@@ -310,7 +313,7 @@
       fits of laughter if this spell affects it.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Identify<br /></div>
+    <td><input type="checkbox" name="skill" id="identify"/>Identify<br /></div>
     </td>
     <td>1 minute</td>
     <td>Touch </td>
@@ -318,7 +321,7 @@
     <td>Choose one object that you must touch throughout the casting of the spell, and learn how to use them.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Illusory Script<br /></div>
+    <td><input type="checkbox" name="skill"id="illusory" />Illusory Script<br /></div>
     </td>
     <td>1 minute</td>
     <td>Touch</td>
@@ -327,7 +330,7 @@
       lasts for the duration. </td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Jump<br /></div>
+    <td><input type="checkbox" name="skill" id="jump"/>Jump<br /></div>
     </td>
     <td>1 action</td>
     <td>Touch</td>
@@ -335,7 +338,7 @@
     <td>Touch a creature. The creature's jump distance is tripled until the spell ends.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Longstrider<br /></div>
+    <td><input type="checkbox" name="skill" id="longstrider"/>Longstrider<br /></div>
     </td>
     <td>1 action</td>
     <td>Touch </td>
@@ -343,7 +346,7 @@
     <td>Touch a creature. The target's speed increases by 10 feet until the spell ends.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Mage Armor<br /></div>
+    <td><input type="checkbox" name="skill" id="mage"/>Mage Armor<br /></div>
     </td>
     <td>1 action</td>
     <td>Touch </td>
@@ -352,7 +355,7 @@
       ends.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Magic Missile<br /></div>
+    <td><input type="checkbox" name="skill" id="magicM"/>Magic Missile<br /></div>
     </td>
     <td>1 action </td>
     <td>120 feet</td>
@@ -360,7 +363,7 @@
     <td>Create three glowing darts of magical force.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Protection from Evil and Good<br /></div>
+    <td><input type="checkbox" name="skill" id="protection"/>Protection from Evil and Good<br /></div>
     </td>
     <td>1 action</td>
     <td>Touch </td>
@@ -369,7 +372,7 @@
       aberrations, celestials, elementals, fey, fiends, and undead. </td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Shield<br /></div>
+    <td><input type="checkbox" name="skill" id="shield" />Shield<br /></div>
     </td>
     <td>1 reaction</td>
     <td>Self </td>
@@ -377,7 +380,7 @@
     <td>An invisible barrier of magical force appears and protects you.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Silent Image<br /></div>
+    <td><input type="checkbox" name="skill" id="silent"/>Silent Image<br /></div>
     </td>
     <td>1 action</td>
     <td>60 feet </td>
@@ -386,7 +389,7 @@
       cube.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Sleep <br /></div>
+    <td><input type="checkbox" name="skill" id="sleep"/>Sleep <br /></div>
     </td>
     <td>1 action</td>
     <td>90 feet </td>
@@ -394,7 +397,7 @@
     <td>Sends creatures into a magical slumber.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Thunderwave<br /></div>
+    <td><input type="checkbox" name="skill" id="thunder"/>Thunderwave<br /></div>
     </td>
     <td>1 action</td>
     <td>Self (15-foot cube)</td>
@@ -402,7 +405,7 @@
     <td>A wave of thunderous force sweeps out from you.</td>
   </tr>
   <tr>
-    <td><input type="checkbox" name="skill" />Unseen Servant<br /></div>
+    <td><input type="checkbox" name="skill" id="unseen" />Unseen Servant<br /></div>
     </td>
     <td>1 action</td>
     <td>60 feet </td>
