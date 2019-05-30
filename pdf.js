@@ -135,7 +135,7 @@ function chooseClass(){
 
 function chooseSubclass(){
     localStorage.cClass += ", School of Abjuration"
-    localStorage.features+= "Level 2: Gold and time spent copying spells reduced by half. Cast magic for self protection. Create a magical ward that absorbs and deals damage\nLevel 6: When a creature within 10 meters of you takes damage, you ward can absorb the damage instead.\nLevel 10: When casting abjuration spells that require an ability check add proficiency.\nLevel 14: Advantage on Saving Throws against spells. Res to damage from spells."
+    localStorage.features+= "\nLevel 2: Gold and time spent copying spells reduced by half. Cast magic for self protection. Create a magical ward that absorbs and deals damage\nLevel 6: When a creature within 10 meters of you takes damage, you ward can absorb the damage instead.\nLevel 10: When casting abjuration spells that require an ability check add proficiency.\nLevel 14: Advantage on Saving Throws against spells. Res to damage from spells.\n"
 }
 
 function chooseCantrips(){
@@ -392,7 +392,7 @@ function fillBoxes(){
     doc.text(localStorage.cClass,273,52)//char class
     doc.text(localStorage.pName,485,52)//player name
     doc.text(localStorage.race,273,79)//char race
-    doc.text('Alignment',379,79)//char alignment
+    doc.text(localStorage.alignment,379,79)//char alignment
     doc.text('EXP',485,79)//char exp
     doc.text(localStorage.proficiencyIn,55,130)//char prof
     doc.text(localStorage.strTotal,58,189)//char str
@@ -463,8 +463,36 @@ function fillBoxes(){
 
 
 function finishSheet(){
-    localStorage.pName = document.getElementById("userName").innerHTML
-    localStorage.cName = document.getElementById("charName").innerHTML
+    localStorage.alignment=""
+    localStorage.pName = document.getElementById("userName").value
+    localStorage.cName = document.getElementById("charName").value
+    if (document.getElementById("lgood").checked==true){
+        localStorage.alignment= "Lawful Good"
+    }
+    if (document.getElementById("ngood").checked==true){
+        localStorage.alignment="Neutral Good"
+    }
+    if (document.getElementById("cgood").checked==true){
+        localStorage.alignment="Chaotic Good"
+    }
+    if (document.getElementById("lneutral").checked==true){
+        localStorage.alignment="Lawful Neutral"
+    }
+    if (document.getElementById("neutral").checked==true){
+        localStorage.alignment ="True Neutral"
+    }
+    if (document.getElementById("cneutral").checked==true){
+        localStorage.alignment="Chaotic Neutral"
+    }
+    if (document.getElementById("levil").checked==true){
+        localStorage.alignment="Lawful Evil"
+    }
+    if (document.getElementById("nevil").checked==true){
+        localStorage.alignment="Neutral Evil"
+    }
+    if (document.getElementById("cevil").checked==true){
+        localStorage.alignment="Chaotic Evil"
+    }
     fillBoxes();
     doc.rect(0,0,260,50)
         .opacity(40);
@@ -481,7 +509,7 @@ function finishSheet(){
     doc.text(localStorage.cantrips,34,176,{
         width:150
     });
-    doc.text(0,41,347,{
+    doc.text(localStorage.spells,41,347,{
         width:150
     })
 
