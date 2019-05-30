@@ -456,6 +456,10 @@ function fillBoxes(){
         width: 175,
         align:'left'
     });
+    doc.text(localStorage.gear,35,631,{
+        width:170
+    })
+
 
 
 }
@@ -493,6 +497,7 @@ function finishSheet(){
     if (document.getElementById("cevil").checked==true){
         localStorage.alignment="Chaotic Evil"
     }
+    localStorage.gear = document.getElementById("gear").value
     fillBoxes();
     doc.rect(0,0,260,50)
         .opacity(40);
