@@ -388,9 +388,9 @@ doc.image('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBQYFBAYGBQ
 
 function fillBoxes(){
     doc.fontSize(12);
-    doc.text(localStorage.testinput,55,64)//char name
+    doc.text(localStorage.cName,55,64)//char name
     doc.text(localStorage.cClass,273,52)//char class
-    doc.text('Timothy',485,52)//player name
+    doc.text(localStorage.pName,485,52)//player name
     doc.text(localStorage.race,273,79)//char race
     doc.text('Alignment',379,79)//char alignment
     doc.text('EXP',485,79)//char exp
@@ -463,6 +463,8 @@ function fillBoxes(){
 
 
 function finishSheet(){
+    localStorage.pName = document.getElementById("userName").innerHTML
+    localStorage.cName = document.getElementById("charName").innerHTML
     fillBoxes();
     doc.rect(0,0,260,50)
         .opacity(40);
