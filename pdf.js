@@ -183,6 +183,93 @@ function chooseCantrips(){
     
 }
 
+function chooseSpells(){
+    localStorage.spells=""
+    if (document.getElementById("alarm").checked==true){
+        localStorage.spells += "Alarm\n"
+    }
+    if (document.getElementById("burning").checked==true){
+        localStorage.spells += "Burning Hands\n"
+    }
+    if (document.getElementById("charm").checked==true){
+        localStorage.spells += "Charm Person\n"
+    }
+    if (document.getElementById("color").checked==true){
+        localStorage.spells += "Color Spray\n"
+    }
+    if (document.getElementById("comprehend").checked==true){
+        localStorage.spells += "Comprehend Languages\n"
+    }
+    if (document.getElementById("detect").checked==true){
+        localStorage.spells += "Detect Magic\n"
+    }
+    if (document.getElementById("disguise").checked==true){
+        localStorage.spells += "Disguise Self\n"
+    }
+    if (document.getElementById("expeditious").checked==true){
+        localStorage.spells += "Expeditious Retreat\n"
+    }
+    if (document.getElementById("false").checked==true){
+        localStorage.spells += "False Life\n"
+    }
+    if (document.getElementById("feather").checked==true){
+        localStorage.spells += "Feather Fall\n"
+    }
+    if (document.getElementById("findF").checked==true){
+        localStorage.spells += "Find Familiar\n"
+    }
+    if (document.getElementById("floating").checked==true){
+        localStorage.spells += "Floating Disk\n"
+    }
+    if (document.getElementById("fog").checked==true){
+        localStorage.spells += "Fog Cloud\n"
+    }
+    if (document.getElementById("grease").checked==true){
+        localStorage.spells += "Grease\n"
+    }
+    if (document.getElementById("hideous").checked==true){
+        localStorage.spells += "Tasha's Hideous Laughter\n"
+    }
+    if (document.getElementById("identify").checked==true){
+        localStorage.spells += "Identify\n"
+    }
+    if (document.getElementById("illusory").checked==true){
+        localStorage.spells += "Illusory Script\n"
+    }
+    if (document.getElementById("jump").checked==true){
+        localStorage.spells += "Jump\n"
+    }
+    if (document.getElementById("longstrider").checked==true){
+        localStorage.spells += "Longstrider\n"
+    }
+    if (document.getElementById("mage").checked==true){
+        localStorage.spells += "Mage Armor\m"
+    }
+    if (document.getElementById("magicM").checked==true){
+        localStorage.spells += "Magic Missile\n"
+    }
+    if (document.getElementById("protection").checked==true){
+        localStorage.spells += "Protection from Good and Evil\n"
+    }
+    if (document.getElementById("shield").checked==true){
+        localStorage.spells += "Shield\n"
+    }
+    if (document.getElementById("silent").checked==true){
+        localStorage.spells += "Silent Image\n"
+    }
+    if (document.getElementById("sleep").checked==true){
+        localStorage.spells += "Sleep\n"
+    }
+    if (document.getElementById("thunder").checked==true){
+        localStorage.spells += "Thunderwave\n"
+    }
+    if (document.getElementById("unseen").checked==true){
+        localStorage.spells += "Unseen Servant\n"
+    }
+        
+    
+}
+
 function buyPoints(){
     localStorage.strMod = Math.floor((localStorage.strTotal-10)/2)
     localStorage.dexMod = Math.floor((localStorage.dexTotal-10)/2)
