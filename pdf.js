@@ -33,6 +33,10 @@ function chooseRaceDragonborn(){
     localStorage.race = "Dragonborn";
     localStorage.racialBonStr = 2
     localStorage.racialBonChar = 1
+    localStorage.racialBonWis = 0
+    localStorage.racialBonDex = 0
+    localStorage.racialBonCon = 0
+    localStorage.racialBonInt = 0
     localStorage.speed =  "30ft."
     if (document.getElementById("black").checked==true){
         breathWeapon = "\nBreath Weapon, Acid, 5 by 30ft line (Dex. save)\n"
