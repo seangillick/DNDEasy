@@ -79,8 +79,14 @@ function chooseClass(){
     localStorage.hitDice = "1d6"
     localStorage.spellCasting = "Int"
     localStorage.features = localStorage.features + "Arcane Recovery: You have learned to regain some of your magical energy by studying your Spellbook. Once per day when you finish a Short Rest, you can choose expended Spell Slots to recover. The Spell Slots can have a combined level that is equal to or less than half your Wizard level (rounded up), and none of the slots can be 6th level or higher.\n"
-    localStorage.spellSlots1 ="2"
+    localStorage.sP1 = "2"
     
+    localStorage.conSaveP = 0
+    localStorage.chaSaveP = 0
+    localStorage.intSaveP = 2
+    localStorage.wisSaveP = 2
+    localStorage.strSaveP = 0
+    localStorage.dexSaveP = 0
     localStorage.profAthletics = "false";
     localStorage.profAcrobatics = "false";
     localStorage.profSoH = "false";
@@ -323,31 +329,31 @@ function buyPoints(){
         localStorage.chaIn = String(localStorage.chaMod)
     }
     
-    localStorage.strSave = localStorage.strMod
+    localStorage.strSave = parseInt(localStorage.strMod)+parseInt(localStorage.strSaveP)
     localStorage.athleticsMod = localStorage.strMod
     
-    localStorage.dexSave = localStorage.dexMod
+    localStorage.dexSave = parseInt(localStorage.dexMod)+parseInt(localStorage.dexSaveP)
     localStorage.acrobaticsMod = localStorage.dexMod
     localStorage.SoHMod = localStorage.dexMod
     localStorage.stealthMod = localStorage.dexMod
     
-    localStorage.conSave = localStorage.conMod
+    localStorage.conSave = parseInt(localStorage.conMod)+parseInt(localStorage.conSaveP)
     
-    localStorage.intSave = localStorage.intMod
+    localStorage.intSave = parseInt(localStorage.intMod)+parseInt(localStorage.intSaveP)
     localStorage.arcanaMod = localStorage.intMod
     localStorage.historyMod = localStorage.intMod
     localStorage.investigationMod = localStorage.intMod
     localStorage.natureMod = localStorage.intMod
     localStorage.religionMod = localStorage.intMod
     
-    localStorage.wisSave = localStorage.wisMod
+    localStorage.wisSave = parseInt(localStorage.wisMod)+parseInt(localStorage.wisSaveP)
     localStorage.animalHandlingMod = localStorage.wisMod
     localStorage.insightMod = localStorage.wisMod
     localStorage.medicineMod = localStorage.wisMod
     localStorage.perceptionMod = localStorage.wisMod
     localStorage.survivalMod = localStorage.wisMod
     
-    localStorage.chaSave = localStorage.chaMod
+    localStorage.chaSave = parseInt(localStorage.chaMod)+parseInt(localStorage.chaSaveP)
     localStorage.deceptionMod = localStorage.chaMod
     localStorage.intimidationMod = localStorage.chaMod
     localStorage.performanceMod = localStorage.chaMod
@@ -526,7 +532,7 @@ function finishSheet(){
     doc.text(localStorage.spells,41,347,{
         width:150
     })
-    doc.text(localStorage.spellSlots1,65,320)//1st Level Spell Slots
+    doc.text(localStorage.sP1,65,320)//1st Level Spell Slots
 
     doc.end();
     stream.on('finish', function() {
