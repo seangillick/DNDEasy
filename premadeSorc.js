@@ -119,6 +119,7 @@ function finishSheet(){
     doc.text("Thunderwave\nShield\n",41,347,{
         width:150
     })
+    doc.text(2,65,320)
 
     doc.end();
     stream.on('finish', function() {
