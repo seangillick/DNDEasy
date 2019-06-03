@@ -64,7 +64,7 @@ function fillBoxes(){
     doc.text("+3",118,560)//Performance
     doc.text("+3",118,570)//Persuasion
     doc.fontSize(18);
-    doc.text("13",231,140)//Armor Class
+    doc.text("16",231,140)//Armor Class
     doc.text("+3",468,142)//Initiative
     doc.text("30",530,142,{
         width: 550
@@ -72,7 +72,7 @@ function fillBoxes(){
     );
     doc.fontSize(12);
     doc.text("3",295,143)//Dex Mod
-    doc.text("10",334,143)//Armor
+    doc.text("13",334,143)//Armor
     doc.text('0',377,143)//Shield
     doc.text('0',419,143)//Misc
     doc.text("8",330,209)//Max HP
@@ -82,7 +82,7 @@ function fillBoxes(){
     doc.text("+5",360,340)//Spell Attk Bonus
     doc.fontSize(8)
     //Features
-    doc.text("Draconic Resilience: As magic flows through your body, it causes physical traits of your dragon ancestors to emerge. At 1st level, your hit point maximum increases by 1 and increases by 1 again whenever you gain a level in this class. Additionally, parts of your skin are covered by a thin sheen of dragon-like scales. When you aren’t wearing armor, your AC equals 13 + your Dexterity modifier.\nElemental Affinity: Starting at 6th level, when you cast a spell that deals damage of the type associated with your draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour.\nDragon Wings: At 14th level, you gain the ability to sprout a pair of dragon wings from your back, gaining a flying speed equal to your current speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn. You can’t manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.\nDraconic Presence: Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or frightened. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your concentration (as if you were casting a concentration spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be charmed (if you chose awe) or frightened (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours.\nBreath Weapon: 15ft. cone (Con. Save) Cold Damage.\nResistance to Cold Damage",413,400,{
+    doc.text("Draconic Resilience: As magic flows through your body, it causes physical traits of your dragon ancestors to emerge. At 1st level, your hit point maximum increases by 1 and increases by 1 again whenever you gain a level in this class. Additionally, parts of your skin are covered by a thin sheen of dragon-like scales. When you aren’t wearing armor, your AC equals 13 + your Dexterity modifier.\nElemental Affinity: Starting at 6th level, when you cast a spell that deals damage of the type associated with your draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour.\nDragon Wings: At 14th level, you gain the ability to sprout a pair of dragon wings from your back, gaining a flying speed equal to your current speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn. You can’t manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.\nBreath Weapon: 15ft. cone (Con. Save) Cold Damage.\nResistance to Cold Damage",413,400,{
         width: 175,
         align:'left'
     });
