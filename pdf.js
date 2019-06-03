@@ -141,8 +141,8 @@ function chooseClass(){
 
 //Fills in Abjuration subclass attributes
 function chooseSubclass(){
-    localStorage.cClass += ", School of Abjuration"
-    localStorage.features+= "\nLevel 2: Gold and time spent copying spells reduced by half. Cast magic for self protection. Create a magical ward that absorbs and deals damage\nLevel 6: When a creature within 10 meters of you takes damage, you ward can absorb the damage instead.\nLevel 10: When casting abjuration spells that require an ability check add proficiency.\nLevel 14: Advantage on Saving Throws against spells. Res to damage from spells.\n"
+    localStorage.subC = ", School of Abjuration"
+    localStorage.subFeat= "\nLevel 2: Gold and time spent copying spells reduced by half. Cast magic for self protection. Create a magical ward that absorbs and deals damage\nLevel 6: When a creature within 10 meters of you takes damage, you ward can absorb the damage instead.\nLevel 10: When casting abjuration spells that require an ability check add proficiency.\nLevel 14: Advantage on Saving Throws against spells. Res to damage from spells.\n"
 }
 
 //Adds cantrips to spell page
@@ -400,7 +400,7 @@ doc.image('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBQYFBAYGBQ
 function fillBoxes(){
     doc.fontSize(12);
     doc.text(localStorage.cName,55,64)//char name
-    doc.text(localStorage.cClass,273,52)//char class
+    doc.text(localStorage.cClass+localStorage.subC,273,52)//char class
     doc.text(localStorage.pName,485,52)//player name
     doc.text(localStorage.race,273,79)//char race
     doc.text(localStorage.alignment,379,79)//char alignment
@@ -464,7 +464,7 @@ function fillBoxes(){
     doc.text(localStorage.spellAttkIn,360,340)//Spell Attk Bonus
     doc.fontSize(8)
     //Features
-    doc.text(localStorage.features,413,400,{
+    doc.text(localStorage.features+localStorage.subFeat,413,400,{
         width: 175,
         align:'left'
     });
